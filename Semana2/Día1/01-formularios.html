@@ -29,6 +29,7 @@
                 id="apellidos"
                 type="text"
                 placeholder="Ej. Perez"
+                value="Gates"
             />
             <br />
             <label for="correo">e-mail:</label>
@@ -45,10 +46,12 @@
                 placeholder="Ej. 20"
             />
             <br/>
+            <!-- radio y checkbox no tiene un value -->
             <input 
                 id="masculino"
                 type="radio"
                 name="genero"
+                value="M"
             />
             <label for="masculino">Masculino</label>
             <input 
@@ -74,9 +77,21 @@
 
             <input id="piqueo" type="checkbox"/>
             <label for="piqueo">Piqueo</label>
-            
+
             <input id="disfraz" type="checkbox"/>
             <label for="disfraz">Disfraz</label>
+            <br />
+            <label>De donde vienes?</label>
+            <select>
+                <option selected disabled>Elige una</option>
+                <option value="PL">Pueblo Libre</option>
+                <option value="L">Lima Cercado</option>
+                <option value="SA">Santa Anita</option>
+                <option value="MF">Miraflores</option>
+                <option value="LC">Lince</option>
+                <option value="JM">Jesús María</option>
+                <option value="CM">Comas</option>
+            </select>
             <br />
             <!-- <input type="submit" value="Enviar" /> -->
             <button type="submit">Enviar</button>
