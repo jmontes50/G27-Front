@@ -26,13 +26,20 @@
             <!-- break -->
             <br />
             <label for="apellidos">Apellidos:</label>
-            <input 
+            <!-- <input 
                 id="apellidos"
                 type="text"
                 placeholder="Ej. Perez"
                 value="Gates"
                 minlength="4"
                 maxlength="10"
+            /> -->
+            <input 
+                id="apellidos"
+                type="text"
+                placeholder="Ej. Perez"
+                value="Gates"
+                pattern="[a-z]{3,}"
             />
             <br />
             <label for="correo">e-mail:</label>
