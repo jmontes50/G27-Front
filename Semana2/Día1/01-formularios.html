@@ -81,8 +81,8 @@
             <input id="disfraz" type="checkbox"/>
             <label for="disfraz">Disfraz</label>
             <br />
-            <label>De donde vienes?</label>
-            <select>
+            <label for="distrito">De donde vienes?</label>
+            <select id="distrito">
                 <option selected disabled>Elige una</option>
                 <option value="PL">Pueblo Libre</option>
                 <option value="L">Lima Cercado</option>
@@ -92,6 +92,18 @@
                 <option value="JM">Jesús María</option>
                 <option value="CM">Comas</option>
             </select>
+            <br />
+            <label for="nacimiento">Fecha de Nacimiento:</label>
+            <input
+                id="nacimiento"
+                type="date"
+            />
+            <br />
+            <label for="color">De que color es tu disfraz</label>
+            <input
+                id="color"
+                type="color"
+            />
             <br />
             <!-- <input type="submit" value="Enviar" /> -->
             <button type="submit">Enviar</button>
