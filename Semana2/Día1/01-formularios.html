@@ -21,6 +21,7 @@
                 id="nombres" 
                 type="text"
                 placeholder="Ej. Juan"
+                required
             />
             <!-- break -->
             <br />
@@ -30,6 +31,8 @@
                 type="text"
                 placeholder="Ej. Perez"
                 value="Gates"
+                minlength="4"
+                maxlength="10"
             />
             <br />
             <label for="correo">e-mail:</label>
@@ -39,11 +42,13 @@
                 placeholder="nombre@dominio.com"
             />
             <br />
-            <label id="edad">Edad</label>
+            <label for="edad">Edad</label>
             <input
                 id="edad"
                 type="number"
                 placeholder="Ej. 20"
+                min="18"
+                max="70"
             />
             <br/>
             <!-- radio y checkbox no tiene un value -->
@@ -109,12 +114,13 @@
             <input id="disfraz" list="disfraces" />
             
             <datalist id="disfraces">
-                <option>Batman</option>
+                <option value="1">Batman</option>
                 <option>Fantasma</option>
                 <option>Momo</option>
                 <option>Duende</option>
                 <option>Hechicera</option>
                 <option>Zombie</option>
+                <option>Gato</option>
             </datalist>
             <br />
             <!-- <input type="submit" value="Enviar" /> -->
