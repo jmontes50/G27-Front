@@ -13,6 +13,7 @@
     <main>
         <p>Ingrese los campos solicitados:</p>
         <!-- form, va a envolver los inputs de entrada del formulario -->
+         <!-- que este la etiqueta form envolviendo los inputs va ayudarme a hacer validaciones de campo y en JS a facilitarme manejar datos -->
         <form>
             <!-- etiqueta, label -->
             <label for="nombres">Nombres:</label>
@@ -21,6 +22,23 @@
                 type="text"
                 placeholder="Ej. Juan"
             />
+            <!-- break -->
+            <br />
+            <label for="apellidos">Apellidos:</label>
+            <input 
+                id="apellidos"
+                type="text"
+                placeholder="Ej. Perez"
+            />
+            <br />
+            <label for="correo">e-mail:</label>
+            <input
+                id="correo"
+                type="email"
+                placeholder="nombre@dominio.com"
+            />
+            <br />
+            <input type="submit" value="Enviar" />
         </form>
     </main>
   </body>
