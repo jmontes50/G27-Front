@@ -37,3 +37,13 @@ p {
     background-color: white;
     font-weight:bold;
 }
+
+/* Juan Carlos */
+#p-accion {
+    color: red;
+}
+
+/* Juan */
+.llamada-accion {
+    color: orange;
+}
