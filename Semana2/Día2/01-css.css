@@ -85,3 +85,14 @@ tr:hover{
     color:white;
     cursor: pointer;
 }
+
+/* pseudoelementos */
+/* selector::pseudoelemento */
+
+.precios::before {
+    content: "\2192"
+}
+
+.precios::after {
+    content: "\2190"
+}
