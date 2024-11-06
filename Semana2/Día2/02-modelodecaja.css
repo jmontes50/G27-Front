@@ -13,8 +13,24 @@ header {
   padding: 25px;
   margin: 20px;
   width: 300px;
+  height: 200px;
+}
+
+h2 {
+  border:2px solid salmon;
+  margin-bottom: 40px;
+  /* bottom - abajo,
+  top - arriba
+  right - derecha
+  left - izquierda */
+  padding-left:50px;
 }
 
 p {
   line-height: 20px;
+  border:2px solid green;
+  /* arribaabajo costados */
+  padding: 40px 75px;
+  /* margin: 🕰️  arriba derecha abajo izquierda*/
+  margin: 10px 20px 40px 80px;
 }
