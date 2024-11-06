@@ -1,0 +1,27 @@
+/* selectores */
+/* selector de etiqueta, hacen referencia a etiquetas html, p, main, header, nav, li */
+main {
+    background-color: cornflowerblue;
+    font-family: Arial;
+}
+
+p {
+    font-weight: bold;
+    text-decoration: none;
+}
+
+/* selectores de clase */
+/* .nombre_de_la_clase */
+.noticias {
+    font-style: italic;
+}
+
+.parrafo {
+    color: white;
+    font-style: normal;
+}
+
+.primicia {
+    color: yellow;
+    background-color: lightseagreen;
+}
