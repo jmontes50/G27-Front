@@ -10,7 +10,7 @@ p {
     text-decoration: none;
 }
 
-/* selectores de clase */
+/* selectores de clase, 1 o varios elementos */
 /* .nombre_de_la_clase */
 .noticias {
     font-style: italic;
@@ -24,4 +24,16 @@ p {
 .primicia {
     color: yellow;
     background-color: lightseagreen;
+}
+
+.secundario {
+    font-size: 12px;
+}
+
+/* selectores de id */
+/* #nombre_id */
+#btn-suscribirse {
+    border:2px solid yellow;
+    background-color: white;
+    font-weight:bold;
 }
