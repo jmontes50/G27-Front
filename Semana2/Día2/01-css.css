@@ -65,3 +65,23 @@ ul > li {
 span ~ p {
     color: green;
 }
+
+/* Pseudoclases */
+/* selector:pseudoclase */
+
+/* odd, impar*/
+tr:nth-of-type(odd) {
+    background-color: white;
+}
+
+/* even, pares */
+tr:nth-of-type(even) {
+    background-color: orange;
+}
+
+/* cursor este encima */
+tr:hover{
+    background-color: red;
+    color:white;
+    cursor: pointer;
+}
