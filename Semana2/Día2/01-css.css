@@ -58,3 +58,10 @@ ul li {
 ul > li {
     font-style: italic;
 }
+
+/* combinador de hermanos */
+/* virgulilla ~ */
+/* de los span que tengan p como hermanos debajo de ellos aplica estos */
+span ~ p {
+    color: green;
+}
