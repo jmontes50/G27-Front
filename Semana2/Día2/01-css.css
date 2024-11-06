@@ -90,7 +90,7 @@ tr:hover{
 /* selector::pseudoelemento */
 
 .precios::before {
-    content: "\2192"
+    content: "\2192";
 }
 
 .precios::after {
