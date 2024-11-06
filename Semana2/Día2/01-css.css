@@ -47,3 +47,14 @@ p {
 .llamada-accion {
     color: orange;
 }
+
+/* Operadores */
+/* hace referencia a todos los li que sean hijos de un ul, cualquiera sea el nivel, hijos, nietos, tataranietos*/
+ul li {
+    color:crimson;
+}
+
+/* a los li que sean hijos inmediatos del ul*/
+ul > li {
+    font-style: italic;
+}
