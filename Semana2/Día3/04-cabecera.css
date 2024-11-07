@@ -1,0 +1,21 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* temporal */
+  border:2px solid red;
+}
+
+header {
+  padding: 96px;
+  /* text-align: center; */
+}
+
+small {
+  display: block;
+}
+
+/* , esa coma es como un Y */
+h1, p, small{
+  text-align: center;
+}
