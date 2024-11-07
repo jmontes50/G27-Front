@@ -6,6 +6,12 @@
   border:2px solid red;
 }
 
+.contenedor {
+  width: 1512px;
+  /* auto, navegador encargate, usa todo el espacio disponible, si lo aplicamos a los costados centrará el elemento horizontalmente */
+  margin: 0 auto;
+}
+
 header {
   padding: 96px;
   /* text-align: center; */
@@ -16,6 +22,13 @@ small {
 }
 
 /* , esa coma es como un Y */
-h1, p, small{
+h1, p, small {
   text-align: center;
+  /* !important me permite romper la especificidad para priorizar una propiedad a favor de otra, pero no es recomendable utilizarlo */
+  margin-bottom: 20px !important;
+}
+
+h1 {
+  width: 1024px;
+  margin:0 auto;
 }
