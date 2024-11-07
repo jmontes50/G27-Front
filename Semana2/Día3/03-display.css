@@ -1,0 +1,62 @@
+* {
+    margin:0;
+    padding:0;
+}
+
+header{
+    width:150px;
+    background-color: blueviolet;
+}
+
+.comentarios {
+    background-color: aqua;
+    /* la gran mayoria de elementos tiene un display: block */
+    /* bloques de lego, por mucho que haya espacio disponible
+    boy a ocupar todo el ancho */
+    display:block;
+    width:200px;
+}
+
+.parrafo1 {
+    background-color: peru;
+    width:300px;
+}
+
+.parrafo2 {
+    background-color: red;
+}
+
+.parrafo3 {
+    background-color: blue;
+    width:150px;
+}
+
+/* span con inline */
+span {
+    background-color: yellowgreen;
+    width:500px;
+    display: inline;
+}
+/* los label, inputs, button, span tienen por defecto un display inline */
+.contenedor {
+    width:1000px;
+    border:2px solid red;
+}
+
+
+label {
+    display:block;
+}
+
+/* NO USAR INLINE BLOCK, tiene fallas al momento de calcular la medida */
+main {
+    display:inline-block;
+    width:500px;
+    border:1px solid green;
+}
+
+aside {
+    display:inline-block;
+    width:500px;
+    border:1px solid orangered;
+}
