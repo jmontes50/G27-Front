@@ -32,3 +32,16 @@ h1 {
   width: 1024px;
   margin:0 auto;
 }
+
+.btn-header {
+  width:286px;
+  /* arriba derecha abajo izquierda */
+  margin:60px auto 60px auto;
+  /* si dos elementos tienen margenes superiores e inferiores cada uno, estos no se suman, SE solapan */
+}
+
+img {
+  width:1280px;
+  margin:0 auto;
+  display: block;
+}
