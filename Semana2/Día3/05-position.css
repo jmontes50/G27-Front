@@ -1,0 +1,16 @@
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.contenedor {
+    height:700px;
+    border:3px solid gray;
+}
+
+.caja1,.caja2,.caja3,.caja4,.caja5{
+    width: 120px;
+    height: 120px;
+    border:2px solid red;
+}
