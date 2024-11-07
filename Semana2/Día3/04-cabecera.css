@@ -10,7 +10,7 @@
   padding: 0;
   box-sizing: border-box;
   /* temporal */
-  border:2px solid red;
+  /* border:2px solid red; */
 }
 
 .contenedor {
@@ -49,7 +49,7 @@ p {
 }
 
 .btn-header {
-  width:286px;
+  max-width:240px;
   /* arriba derecha abajo izquierda */
   margin:60px auto 60px auto;
   /* si dos elementos tienen margenes superiores e inferiores cada uno, estos no se suman, SE solapan */
@@ -59,4 +59,26 @@ img {
   width:1280px;
   margin:0 auto;
   display: block;
+}
+
+p {
+  color: gray;
+  width: 720px;
+  margin: 0 auto;
+}
+
+button {
+  border-radius: 200px;
+  height: 60px;
+  padding:16px 28px;
+  border:1px solid black;
+}
+
+.btn-light {
+  background-color: white;
+}
+
+.btn-dark {
+  background-color: black;
+  color: white;
 }
