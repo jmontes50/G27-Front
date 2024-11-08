@@ -11,14 +11,32 @@
   background-color: aqua;
   display: flex;
   /* gap: 20px; */
-  /* justify-content: space-evenly; */
+  /* horizontal */
+  justify-content: space-evenly;
   /* justify-content: space-between; */
   /* justify-content: space-around; */
-  justify-content: center;
+  /* justify-content: center; */
+  align-items: center;
+  flex-direction: row;
+
+  /* wrap */
+  flex-wrap: nowrap;
 }
 
 .caja {
   background-color: yellow;
   height: 120px;
   width: 120px;
+}
+
+.caja1 {
+    /* flex-grow: 1; */
+}
+
+.caja2 {
+    flex-shrink: 2;
+}
+
+.caja4 {
+    flex-shrink: 4;
 }
