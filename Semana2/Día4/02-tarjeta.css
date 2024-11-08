@@ -4,10 +4,29 @@
   box-sizing: border-box;
 }
 
+body {
+  background-color: #F4D04E;
+}
+
 article {
   width: 350px;
   padding: 20px;
   border: 2px solid black;
   border-radius: 20px;
   margin: 10px auto;
+  background-color: white;
+  /* box-shadow */
+  box-shadow: 5px 5px;
+}
+
+.img-card {
+  /* en este caso este 100% hace referencia al espacio disponible del elemento padre */
+  width: 100%;
+}
+
+.btn-card {
+  background-color: #F4D04E;
+  padding:3px 5px;
+  border-radius:8px;
+  font-weight:bold;
 }
