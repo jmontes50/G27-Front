@@ -17,6 +17,9 @@ main {
   margin: 5px;
   height:400px;
   position: relative;
+  /* no es común mover un elemento con position relative, es que sea solo una referencia */
+  /* top: 20px;
+  left: 40px; */
 }
 
 .alerta {
@@ -29,4 +32,14 @@ main {
   /* right: -50px;
   bottom: 10px; */
   /* 1. lo podemos mover con top, left, right, bottom */
+}
+
+.chat {
+  background-color:green;
+  color:white;
+  padding: 20px;
+  /* el fixed toma en cuenta al propio navegador para posicionarse */
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
 }
