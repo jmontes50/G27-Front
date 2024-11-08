@@ -17,11 +17,13 @@ article {
   background-color: white;
   /* box-shadow */
   box-shadow: 5px 5px;
+  font-family: Arial, sans-serif;
 }
 
 .img-card {
   /* en este caso este 100% hace referencia al espacio disponible del elemento padre */
   width: 100%;
+  margin-bottom:15px;
 }
 
 .btn-card {
@@ -29,4 +31,29 @@ article {
   padding:3px 5px;
   border-radius:8px;
   font-weight:bold;
+  margin-bottom:15px;
+}
+
+.date {
+  margin-bottom:15px;
+}
+
+h2 {
+  margin-bottom:15px;
+}
+
+p {
+  margin-bottom:15px;
+}
+
+.info-teacher {
+  margin-left: auto;
+  position: relative;
+  width: 100px;
+}
+
+.info-teacher > h6 {
+  position:absolute;
+  top: 5px;
+  left: 40px;
 }
