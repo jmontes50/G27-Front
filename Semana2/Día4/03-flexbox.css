@@ -1,18 +1,24 @@
 * {
-    margin:0;
-    padding:0;
-    box-sizing: border-box;
-    /* temporal */
-    border:2px solid red;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* temporal */
+  border: 2px solid red;
 }
 
 .contenedor {
-    height: 800px;
-    background-color: aqua;
+  height: 800px;
+  background-color: aqua;
+  display: flex;
+  /* gap: 20px; */
+  /* justify-content: space-evenly; */
+  /* justify-content: space-between; */
+  /* justify-content: space-around; */
+  justify-content: center;
 }
 
 .caja {
-    background-color: yellow;
-    height: 120px;
-    width:120px;
+  background-color: yellow;
+  height: 120px;
+  width: 120px;
 }
