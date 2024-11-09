@@ -1,0 +1,23 @@
+* {
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    /* temporales */
+    border:2px solid red;
+}
+
+html {
+    /* el valor del font-size x defecto de html es de 16px */
+    font-size: 20px;
+}
+
+.card {
+    font-size: 1rem;
+    /* font-size: 30px; */
+    padding:20px;
+}
+
+.card-title {
+    font-size: 2em; /*40px*/
+    margin-bottom: 0.5em; /*40px*/
+}
