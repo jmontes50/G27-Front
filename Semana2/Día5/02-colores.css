@@ -23,3 +23,17 @@ body {
   /* el 4to valor es un valor que va de 0 a 1,con decimales */
   background-color: rgba(255, 0, 0, 0.5)
 }
+
+.caja3 {
+  /* color, saturación%, luminosidad% */
+  background-color: hsl(120, 100%, 50%);
+}
+
+.caja4 {
+  /* linear-gradient(grados, colores...) */
+  background: linear-gradient(135deg, red, white, #0000ff);
+}
+
+.caja5 {
+  background: radial-gradient(circle, red, white, #0000ff);
+}
