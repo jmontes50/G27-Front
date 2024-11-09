@@ -42,3 +42,18 @@ li {
   gap:20px;
   font-family: 'Montserrat', sans-serif;
 }
+
+.btn {
+  border:1px solid black;
+  border-radius:36px;
+  padding:10px 16px;
+}
+
+.btn-light {
+  color: black;
+}
+
+.btn-dark {
+  background-color: #000000;
+  color: rgb(255,255,255);
+}
