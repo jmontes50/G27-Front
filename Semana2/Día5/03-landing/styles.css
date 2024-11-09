@@ -7,7 +7,7 @@
     border: 1px solid red;
 }
 
-/* estilos generales */
+/* estilos generales, selectores de etiqueta */
 h1, h2, h3, h4, h5, h6 {
     /* determinado tipo de fuente */
     font-family: 'Fraunces', serif;
@@ -20,5 +20,25 @@ a {
 }
 
 li {
+  /* remueve los estilos por defecto de las viñetas */
   list-style: none;
+}
+
+.contenedor {
+  margin:0 auto;
+  /* un ancho máximo, por debajo del valor el ancho cambiará */
+  max-width: 1200px;
+}
+
+/* nav */
+.navegacion {
+  padding:40px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.main-links {
+  display: flex;
+  gap:20px;
+  font-family: 'Montserrat', sans-serif;
 }
