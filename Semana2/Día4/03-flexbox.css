@@ -11,11 +11,12 @@
   background-color: aqua;
   display: flex;
   /* gap: 20px; */
-  /* horizontal */
-  justify-content: space-evenly;
-  /* justify-content: space-between; */
+  /* horizontal, main axis */
+  /* justify-content: space-evenly; */
+  justify-content: space-between;
   /* justify-content: space-around; */
   /* justify-content: center; */
+  /* vertical, cross axis */
   align-items: center;
   flex-direction: row;
 
@@ -30,7 +31,7 @@
 }
 
 .caja1 {
-    /* flex-grow: 1; */
+    flex-grow: 1;
 }
 
 .caja2 {
@@ -39,4 +40,9 @@
 
 .caja4 {
     flex-shrink: 4;
+}
+
+.caja5 {
+  /* este elemento se va alinear de forma individuaL */
+  align-self: flex-end;
 }
