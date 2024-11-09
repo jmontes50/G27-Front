@@ -1,0 +1,25 @@
+.caja {
+  width: 150px;
+  height: 150px;
+  border: 2px solid black;
+}
+
+.caja1 {
+  /* Colores hexadecimales
+    3 pares, ROJO, VERDE, AZUL */
+  /* background-color: #000000; */
+  /* background-color: #ffffff; */
+  background-color: #0000ff;
+}
+
+body {
+  background-image: url('https://transforms.stlzoo.org/production/animals/southern-rock-hopper-penguin-01-01.jpg?w=1200&h=1200&auto=compress%2Cformat&fit=crop&dm=1660831481&s=0093132e2dc563b35695cb925f1ba7f4');
+}
+
+.caja2 {
+  /* background-color: rgb(0,0,0); */
+  /* background-color: rgb(255,255,255); */
+  /* background-color: rgb(255, 0, 0); */
+  /* el 4to valor es un valor que va de 0 a 1,con decimales */
+  background-color: rgba(255, 0, 0, 0.5)
+}
