@@ -31,7 +31,7 @@ body {
 
 .caja4 {
   /* linear-gradient(grados, colores...) */
-  background: linear-gradient(135deg, red, white, #0000ff);
+  background: linear-gradient(180deg, red, white, #0000ff, purple, green);
 }
 
 .caja5 {
