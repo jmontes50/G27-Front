@@ -30,6 +30,29 @@ li {
   max-width: 1200px;
 }
 
+h1 {
+  font-size: 4.5rem;
+}
+h2 {
+  font-size: 4rem;
+}
+h3 {
+  font-size: 3.5rem;
+}
+h4 {
+  font-size: 3rem;
+}
+h5 {
+  font-size: 2.5rem;
+}
+h6 {
+  font-size: 1rem;
+}
+p, a {
+  font-size: 1rem;
+  font-family: 'Montserrat', sans-serif;
+}
+
 /* nav */
 .navegacion {
   padding:40px;
@@ -63,4 +86,19 @@ li {
   font-family: 'Fraunces', serif;
   font-size:2rem;
   font-weight: 800;
+}
+
+/* header */
+.cabecera {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap:30px;
+  text-align:center;
+  padding: 82px;
+}
+
+.buttons-header {
+  display: flex;
+  gap:10px;
 }
