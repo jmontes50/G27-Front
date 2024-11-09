@@ -4,7 +4,7 @@
     padding: 0;
     box-sizing: border-box;
     /* temporal */
-    border: 1px solid red;
+    /* border: 1px solid red; */
 }
 
 /* estilos generales, selectores de etiqueta */
@@ -39,6 +39,7 @@ li {
 
 .main-links {
   display: flex;
+  align-items: center;
   gap:20px;
   font-family: 'Montserrat', sans-serif;
 }
@@ -56,4 +57,10 @@ li {
 .btn-dark {
   background-color: #000000;
   color: rgb(255,255,255);
+}
+
+.logo {
+  font-family: 'Fraunces', serif;
+  font-size:2rem;
+  font-weight: 800;
 }
