@@ -207,3 +207,21 @@ p, a {
   gap: 40px;
 }
 
+.card{
+  display: flex;
+  flex-direction: column;
+  gap:20px;
+}
+
+.img-card-top {
+  min-height:230px;
+  text-align: center;
+}
+
+.text-card {
+  font-size:1.05rem;
+}
+
+.text-card, .card h5 {
+  text-align: center;
+}
