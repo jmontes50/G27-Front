@@ -102,3 +102,15 @@ p, a {
   display: flex;
   gap:10px;
 }
+
+/* questions */
+.questions {
+  display: flex;
+  height:504px;
+}
+
+.text-question {
+  font-family: 'Fraunces', serif;
+  font-size: 64px;
+  font-weight: 300;
+}
