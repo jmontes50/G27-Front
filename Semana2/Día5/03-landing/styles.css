@@ -156,3 +156,18 @@ p, a {
 .content-webinar > p {
   margin-bottom:40px;
 }
+
+/* tabla */
+
+
+.table-price{
+  width: 100%;
+  /* sirve para evitar bordes entre las celdas de la tabla que vienen por defecto */
+  border-collapse: collapse;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.table-price tr {
+  
+  /* background-color: #FED501; */
+}
