@@ -158,7 +158,13 @@ p, a {
 }
 
 /* tabla */
+.prices{
+  padding:96px 0;
+}
 
+.prices > h5 {
+  margin-bottom: 30px;
+}
 
 .table-price{
   width: 100%;
