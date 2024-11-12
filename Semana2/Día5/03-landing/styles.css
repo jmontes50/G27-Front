@@ -191,3 +191,19 @@ p, a {
   border-top-right-radius: 10px;
   border-bottom-right-radius: 10px;
 }
+
+/* resources */
+.resources {
+  margin-bottom: 96px;
+}
+
+.resources > h2 {
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.cards {
+  display: flex;
+  gap: 40px;
+}
+
