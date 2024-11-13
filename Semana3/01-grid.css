@@ -1,0 +1,24 @@
+/* reset */
+*{
+  margin:0;
+  padding:0;
+  box-sizing: border-box;
+}
+
+.padre {
+  border:2px solid red;
+  /* como tamaño mínimo sera 800px pero si el contenido excede ese tamaño el elemento crecerá */
+  min-height:800px;
+  /* GRID */
+  display: grid;
+  /* en base a los tamaños que indiquemos se dibujaran las columnas */
+  /* grid-template-columns: 200px 200px 200px; */
+  /* grid-template-columns: 33.33% 33.33% 33.33%; */
+  /* fr - freespace, genera las columnas en base al espacio libre y las proporciones indicadas */
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.hijo {
+  border:2px solid blue;
+}
+
