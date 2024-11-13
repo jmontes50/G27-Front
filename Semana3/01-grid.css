@@ -15,7 +15,9 @@
   /* grid-template-columns: 200px 200px 200px; */
   /* grid-template-columns: 33.33% 33.33% 33.33%; */
   /* fr - freespace, genera las columnas en base al espacio libre y las proporciones indicadas */
-  grid-template-columns: 1fr 1fr 1fr;
+  /* grid-template-columns: 1fr 1fr 1fr; */
+  grid-template-columns: repeat(3, 200px);
+  grid-template-rows: 200px 200px 200px;
 }
 
 .hijo {
