@@ -11,6 +11,7 @@
   min-height:800px;
   /* GRID */
   display: grid;
+  /* GRID EXPLÍCITO */
   /* en base a los tamaños que indiquemos se dibujaran las columnas */
   /* grid-template-columns: 200px 200px 200px; */
   /* grid-template-columns: 33.33% 33.33% 33.33%; */
@@ -21,6 +22,11 @@
   grid-template-columns: repeat(3, minmax(200px, 1fr));
   grid-template-rows: 200px 200px 200px;
   gap: 30px;
+  /* GRID IMPLÍCITO, para el contenido extra */
+  grid-auto-columns: 400px;
+  grid-auto-rows:  400px;
+  /* flujo que van a seguir los hijos adicionales */
+  grid-auto-flow: row;
 }
 
 .hijo {
@@ -42,3 +48,5 @@
   background-color:darkturquoise;
   grid-column: 1 / 4;
 }
+
+/*  */
