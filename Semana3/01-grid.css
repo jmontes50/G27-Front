@@ -20,9 +20,15 @@
   /* minmax(anchominimo, anchomáximo) */
   grid-template-columns: repeat(3, minmax(200px, 1fr));
   grid-template-rows: 200px 200px 200px;
+  gap: 30px;
 }
 
 .hijo {
   border:2px solid blue;
 }
 
+.hijo1 {
+  background-color: cornflowerblue;
+  grid-column: 1 / 3;
+  grid-row: 1 / 3;
+}
