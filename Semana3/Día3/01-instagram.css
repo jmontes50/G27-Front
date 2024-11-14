@@ -1,0 +1,19 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* temporal */
+  border:2px solid red;
+}
+
+.photos {
+  display: grid;
+  /* grid, implícito */
+  grid-auto-columns: repeat(3, 300px);
+  grid-auto-rows: repeat(3, 300px);
+}
+
+.photo-box {
+  width:300px;
+  height:300px;
+}
