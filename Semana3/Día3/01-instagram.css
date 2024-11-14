@@ -42,4 +42,11 @@
   position:absolute;
   top:0;
   left:0;
+  /* flex para que los elementos hijos aparezcan centrados */
+  display: flex;
+  justify-content:center;
+  gap:10px;
+  align-items: center;
+  color: white;
+  font-family: Arial, sans-serif;
 }
