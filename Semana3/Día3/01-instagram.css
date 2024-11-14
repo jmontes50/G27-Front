@@ -24,3 +24,10 @@
   object-fit: cover;
   /* height:300px; */
 }
+
+/* de la clase photo-box quiero al elemento n9, dentro estoy buscando al elemento con la clase .photo */
+.photo-box:nth-of-type(9) .photo {
+  /* mueve una imagen respecto a su contenedor
+  object-position: left, top */
+  object-position: -140px 0;
+}
