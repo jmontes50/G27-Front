@@ -1,0 +1,68 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* estilos generales, selectores de etiqueta */
+
+li {
+  list-style: none;
+}
+
+.container {
+  max-width: 1200px;
+  margin:0 auto;
+}
+
+.main-menu {
+  display:flex;
+  padding:20px;
+  justify-content: space-between;
+}
+
+.logo {
+  font-weight: 800;
+}
+
+.links {
+  display:flex;
+  gap:20px;
+  align-items: center;
+}
+
+.btn {
+  padding:10px 15px;
+}
+
+.btn-blue-box {
+  border: 2px solid blue;
+  color: blue;
+}
+
+.btn-blue{
+  border: 2px solid blue;
+  background-color: blue;
+  color: white;
+}
+
+.btn-gray-box{
+  border: 2px solid #555555;
+  color: #555555;
+  background-color: white;
+}
+
+/* header */
+.header {
+  display: flex;
+  min-height: 700px;
+  align-items: center;
+  gap:40px;
+}
+
+.text-header {
+  display:flex;
+  flex-direction: column;
+  gap: 30px;
+}
