@@ -3,7 +3,7 @@
   padding: 0;
   box-sizing: border-box;
   /* temporal */
-  border:2px solid red;
+  /* border:2px solid red; */
 }
 
 .photos {
@@ -35,7 +35,9 @@
   object-position: -140px 0;
 }
 
-.shadow {
+/* cuando pongamos el cursor encima de .photo-box, recién aplicará los estilos para .shadow */
+.photo-box:hover .shadow {
+  cursor:pointer;
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.2);
@@ -49,4 +51,8 @@
   align-items: center;
   color: white;
   font-family: Arial, sans-serif;
+}
+
+.shadow {
+  display: none;
 }
