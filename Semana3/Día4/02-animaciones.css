@@ -2,6 +2,9 @@ img {
   width: 150px;
   animation-name: volar;
   animation-duration: 6s;
+  animation-delay: 2000ms;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
 }
 
 /* @keyframes nombrepropio */
@@ -12,16 +15,19 @@ img {
     transform: translate(0, 0);
   }
   /* porcentaje 0(from) hasta un 100%(to) */
-  25% {
+  25.5% {
     transform: translate(500px, 0);
+    background-color: aqua;
   }
 
   30% {
     transform: translate(500px, 0) rotate(-90deg);
+    background-color: aqua;
   }
 
   50% {
     transform: translate(500px, 500px) rotate(-90deg);
+    background-color: aquamarine;
   }
 
   55% {
