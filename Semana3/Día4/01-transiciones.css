@@ -23,12 +23,12 @@
   height: 100px;
   background-color: blue;
   /* transform me permite hacer modificaciones a un elemento, distorisionarlo, moverlo, agrandarlo y tiene a disposición diferentes funciones disponibles */
-  /* translate(ejeX, ejeY) */
   transition-duration: 500ms;
 }
 
 .caja2:hover {
   background-color: orangered;
+    /* translate(ejeX, ejeY) */
   transform: translate(100px, 0);
 }
 

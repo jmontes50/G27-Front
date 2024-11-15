@@ -1,0 +1,17 @@
+img {
+  width: 150px;
+}
+
+/* @keyframes nombrepropio */
+@keyframes volar {
+  /* desde */
+  from {
+    /* propiedades de css */
+    transform: translate(0, 0);
+  }
+
+  /* hacia */
+  to {
+    transform: translate(600px, 600px);
+  }
+}
