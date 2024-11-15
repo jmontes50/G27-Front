@@ -1,0 +1,21 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* temporal */
+  border: 2px solid red;
+}
+
+.container {
+  /* tamaño mínimo hasta donde se puede reducir el ancho*/
+  min-width: 800px;
+  /* tamaño máximo que puede alcanzar el ancho */
+  max-width: 1200px;
+  /* tamaño mínimo hasta donde se puede reducir el alto */
+  min-height: 1000px;
+ /* tamaño máximo que puede alcanzar el alto */
+  max-height: 1200px;
+  /* centrando */
+  margin: 0 auto;
+  padding: 40px;
+}
