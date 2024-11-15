@@ -22,6 +22,9 @@
   width: 100px;
   height: 100px;
   background-color: blue;
+  /* transform me permite hacer modificaciones a un elemento, distorisionarlo, moverlo, agrandarlo y tiene a disposición diferentes funciones disponibles */
+  /* translate(ejeX, ejeY) */
+  transform: translate(100px, 0);
 }
 
 .texto {
@@ -30,4 +33,7 @@
   background-color: darkcyan;
   color: white;
   font-family: Arial, sans-serif;
+  /* scale, escala en base al un valor númerico x2 x4 x0.5 */
+  /* rotate, en base aun valor en grados(deg) girara el elemento */
+  transform: translate(75px, 75px) scale(2) rotate(90deg) skewX(45deg) skewY(20deg);
 }
