@@ -1,21 +1,33 @@
 .caja1 {
-    width: 100px;
-    height: 100px;
-    background-color: aqua;
+  width: 100px;
+  height: 100px;
+  background-color: aqua;
+  /* lo recomendable es que no dure más de 500ms */
+  transition-duration: 2000ms; /*ms o s*/
+  /* transition-property: width; */
+  /* transition-property: width, background-color; */
+  transition-property: all;
+  /* transition-timing-function: ease; */
+  transition-timing-function: cubic-bezier(.12,.96,.86,.13);
+  /* transition-timing-function: steps(10); */
 }
 
+.caja1:hover {
+  background-color: orange;
+  width: 200px;
+  height: 200px;
+}
 
 .caja2 {
-    width: 100px;
-    height: 100px;
-    background-color: blue;
-
+  width: 100px;
+  height: 100px;
+  background-color: blue;
 }
 
 .texto {
-    width: 400px;
-    border: 2px solid red;
-    background-color: darkcyan;
-    color: white;
-    font-family: Arial, sans-serif;
+  width: 400px;
+  border: 2px solid red;
+  background-color: darkcyan;
+  color: white;
+  font-family: Arial, sans-serif;
 }
