@@ -1,0 +1,21 @@
+.caja1 {
+    width: 100px;
+    height: 100px;
+    background-color: aqua;
+}
+
+
+.caja2 {
+    width: 100px;
+    height: 100px;
+    background-color: blue;
+
+}
+
+.texto {
+    width: 400px;
+    border: 2px solid red;
+    background-color: darkcyan;
+    color: white;
+    font-family: Arial, sans-serif;
+}
