@@ -1,5 +1,7 @@
 img {
   width: 150px;
+  animation-name: volar;
+  animation-duration: 6s;
 }
 
 /* @keyframes nombrepropio */
@@ -9,9 +11,22 @@ img {
     /* propiedades de css */
     transform: translate(0, 0);
   }
+  /* porcentaje 0(from) hasta un 100%(to) */
+  25% {
+    transform: translate(500px, 0);
+  }
+
+  30% {
+    transform: translate(500px, 0) rotate(-90deg);
+  }
+
+  50% {
+    transform: translate(500px, 500px) rotate(-90deg);
+  }
+
 
   /* hacia */
-  to {
+  /* to {
     transform: translate(600px, 600px);
-  }
+  } */
 }
