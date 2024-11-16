@@ -91,3 +91,23 @@
   grid-column: 1 / 2;
   grid-row: 3 / 4;
 }
+
+/* animaciones */
+
+@keyframes entrada {
+  /* desde */
+  from {
+    /* con 0 directamente no va a aparecer */
+    transform: scale(0);
+  }
+
+  70% {
+    /* va a aparecer pero un poquito mas grande */
+    transform: scale(1.05);
+  }
+
+  to {
+    /* aparece en su tamaño normal */
+    transform: scale(1);
+  }
+}
