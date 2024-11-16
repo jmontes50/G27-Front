@@ -77,9 +77,19 @@ main {
   margin:10px;
 }
 
+.recent-searches h2 {
+  margin-bottom: 20px;
+}
+
 .search-cards {
   display: flex;
   gap:20px;
+  width: 100%;
+  /* height: 100px; */
+  /* overflow si sobrepasa lo esconde */
+  /* overflow: hidden; */
+  /* scroll tendremos disponible una barra de desplazamiento para el contenido que se desborde */
+  overflow: scroll;
 }
 
 .artist-card {
@@ -92,6 +102,7 @@ main {
   position: relative;
 }
 
+/* selector de atributo */
 img[alt=icono-cerrar]{
   position: absolute;
   top:10px;
