@@ -226,3 +226,15 @@ p, a {
 .text-card, .card h5 {
   text-align: center;
 }
+
+/* estilos añadidos */
+.formas-header {
+  /* al indicar que algo va a tener un ancho del 100%, hace que como no excede el espacio fijado por su contenedor(elemento padre) */
+  width: 100%;
+}
+
+@media screen and (width <= 800px) {
+  .contenedor {
+    padding: 24px;
+  }
+}
