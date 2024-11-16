@@ -77,6 +77,10 @@ main {
   margin:10px;
 }
 
+.recent-searches {
+  margin-bottom: 40px;
+}
+
 .recent-searches h2 {
   margin-bottom: 20px;
 }
