@@ -82,6 +82,15 @@ main {
   gap:20px;
 }
 
+.artist-card {
+  background-color: var(--secondary-color-03);
+  padding:20px 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  border-radius: 5px;
+}
+
 .ellipse-artist {
   border-radius: 50%;
   width: 150px;
