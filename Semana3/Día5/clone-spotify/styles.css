@@ -34,3 +34,10 @@ body {
   color: var(--secondary-color-04);
   font-family: "Montserrat", sans-serif;
 }
+
+.main-menu {
+  padding: 8px 16px;
+  display: flex;
+  width:100%;
+  justify-content: space-between;
+} 
