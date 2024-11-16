@@ -40,4 +40,24 @@ body {
   display: flex;
   width:100%;
   justify-content: space-between;
-} 
+}
+
+.box-search {
+  display: flex;
+  align-items: center;
+  gap:10px;
+}
+
+.box-search i {
+/* home */
+  color: var(--secondary-color-03)
+}
+
+.input-search {
+  padding:8px;
+  border-radius: 20px;
+  background-color: var(--secondary-color-03);
+  color: white;
+  /* el outline es un borde para los input para cuando estan seleccionados */
+  outline:none;
+}
