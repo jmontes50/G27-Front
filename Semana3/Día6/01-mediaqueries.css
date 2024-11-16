@@ -1,0 +1,32 @@
+header {
+    width: 800px;
+    margin:0 auto;
+    background-color: aqua;
+    padding: 20px;
+    text-align: center;
+}
+
+/* <medio-dispositivo>: tv, screen, printer */
+
+/* @media <medio-dispositivo> and (condicional en base al ancho) {
+    selectores {
+        propiedades: valores
+        Solo serán utiles cuando se cumpla la condicional y el medio
+    }
+}
+*/
+
+@media screen and (width <= 1024px) {
+    header {
+        background-color: orange;
+        padding:10px;
+    }
+}
+
+@media screen and (width <= 480px) {
+    h1 {
+        color: red;
+        font-family: Arial;
+        font-size: 48px;
+    }
+}
