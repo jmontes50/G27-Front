@@ -3,7 +3,7 @@
   padding: 0;
   box-sizing: border-box;
   /* temporal */
-  border: 2px solid red;
+  /* border: 2px solid red; */
 }
 
 .container {
@@ -28,6 +28,7 @@
 .card {
   position: relative;
   filter: grayscale(100%);
+  transition-duration: 0.5s;
 }
 
 .card:hover {
