@@ -28,7 +28,12 @@
 .card {
   position: relative;
   filter: grayscale(100%);
+  /* transición */
   transition-duration: 0.5s;
+  /* animación */
+  animation-name: entrada;
+  animation-duration: 1s;
+  animation-timing-function: ease-out;
 }
 
 .card:hover {
