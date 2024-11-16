@@ -89,8 +89,23 @@ main {
   /* overflow si sobrepasa lo esconde */
   /* overflow: hidden; */
   /* scroll tendremos disponible una barra de desplazamiento para el contenido que se desborde */
-  overflow: scroll;
+  /* overflow: scroll; */
+  overflow-x: scroll;
 }
+
+/* chrome */
+/* .search-cards::-webkit-scrollbar {
+  width: 100px;
+  height: 100px;
+}
+
+.search-cards::-webkit-scrollbar-track {
+  background: var(--secondary-color-01);
+}
+
+.search-cards::-webkit-scrollbar-thumb {
+  background: #191414;
+} */
 
 .artist-card {
   background-color: var(--secondary-color-03);
