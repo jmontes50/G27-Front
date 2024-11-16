@@ -16,7 +16,11 @@ header {
 }
 */
 
+/* a las medidas utilizadas para crear los condicionales de los media queries, se les llama breakpoints (puntos de quiebre) */
+
 @media screen and (width <= 1024px) {
+    /* agregando */
+    /* y cuando encontremos una propiedad para sobreescribir, se sobreescribe */
     header {
         background-color: orange;
         padding:10px;
