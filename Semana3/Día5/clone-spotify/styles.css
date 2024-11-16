@@ -128,3 +128,14 @@ img[alt=icono-cerrar]{
   border-radius: 50%;
   width: 150px;
 }
+
+/* explore-all */
+.title-explore-all {
+  margin-bottom:20px;
+}
+
+.box-explore-all {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(250px, 1fr));
+  gap:20px;
+}
