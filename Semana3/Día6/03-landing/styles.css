@@ -253,5 +253,11 @@ p, a {
     width: 100%;
     padding: 48px 20px;
     overflow: scroll;
+    margin:20px;
+  }
+
+  .cards {
+    flex-direction: column;
+    padding: 20px;
   }
 }
