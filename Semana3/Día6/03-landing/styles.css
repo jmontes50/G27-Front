@@ -113,7 +113,7 @@ p, a {
 
 .text-question {
   font-family: 'Fraunces', serif;
-  font-size: 64px;
+  font-size: calc(2vw + 1rem);
   font-weight: 300;
 }
 
@@ -236,5 +236,10 @@ p, a {
 @media screen and (width <= 800px) {
   .cabecera {
     padding: 24px;
+  }
+
+  .questions {
+    flex-direction: column;
+    padding:20px;
   }
 }
