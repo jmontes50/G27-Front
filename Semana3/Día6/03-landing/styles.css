@@ -1,17 +1,22 @@
 /* reset */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    /* temporal */
-    /* border: 1px solid red; */
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* temporal */
+  /* border: 1px solid red; */
 }
 
 /* estilos generales, selectores de etiqueta */
-h1, h2, h3, h4, h5, h6 {
-    /* determinado tipo de fuente */
-    font-family: 'Fraunces', serif;
-    font-weight: 300;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  /* determinado tipo de fuente */
+  font-family: "Fraunces", serif;
+  font-weight: 300;
 }
 
 a {
@@ -25,7 +30,7 @@ li {
 }
 
 .contenedor {
-  margin:0 auto;
+  margin: 0 auto;
   /* un ancho máximo, por debajo del valor el ancho cambiará */
   max-width: 1200px;
 }
@@ -49,14 +54,15 @@ h5 {
 h6 {
   font-size: calc(0.5vw + 1rem);
 }
-p, a {
+p,
+a {
   font-size: calc(0.25vw + 1rem);
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
 }
 
 /* nav */
 .navegacion {
-  padding:40px;
+  padding: 40px;
   display: flex;
   justify-content: space-between;
 }
@@ -64,14 +70,14 @@ p, a {
 .main-links {
   display: flex;
   align-items: center;
-  gap:20px;
-  font-family: 'Montserrat', sans-serif;
+  gap: 20px;
+  font-family: "Montserrat", sans-serif;
 }
 
 .btn {
-  border:1px solid black;
-  border-radius:36px;
-  padding:10px 16px;
+  border: 1px solid black;
+  border-radius: 36px;
+  padding: 10px 16px;
 }
 
 .btn-light {
@@ -80,12 +86,12 @@ p, a {
 
 .btn-dark {
   background-color: #000000;
-  color: rgb(255,255,255);
+  color: rgb(255, 255, 255);
 }
 
 .logo {
-  font-family: 'Fraunces', serif;
-  font-size:2rem;
+  font-family: "Fraunces", serif;
+  font-size: 2rem;
   font-weight: 800;
 }
 
@@ -94,103 +100,101 @@ p, a {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap:30px;
-  text-align:center;
+  gap: 30px;
+  text-align: center;
   padding: 82px;
 }
 
 .buttons-header {
   display: flex;
-  gap:10px;
+  gap: 10px;
 }
 
 /* questions */
 .questions {
   display: flex;
-  height:504px;
+  height: 504px;
   /* border:4px solid red; */
 }
 
 .text-question {
-  font-family: 'Fraunces', serif;
+  font-family: "Fraunces", serif;
   font-size: calc(2vw + 1rem);
   font-weight: 300;
 }
 
 .question1 {
-  border-top: 4px solid #E26632;
+  border-top: 4px solid #e26632;
   padding-top: 24px;
-  padding-bottom:40px;
+  padding-bottom: 40px;
 }
 
 .question1 > .fa-message {
-  color: #E26632;
+  color: #e26632;
   margin-bottom: 32px;
 }
 
 .question2 {
-  border-top: 4px solid #007CC2;
+  border-top: 4px solid #007cc2;
   align-self: flex-end;
   padding-top: 24px;
-  padding-bottom:40px;
+  padding-bottom: 40px;
 }
 
 .question2 > .fa-message {
-  color: #007CC2;
+  color: #007cc2;
   margin-bottom: 32px;
 }
 
 /* webinar */
 .webinar {
-  background-color: #FED501;
+  background-color: #fed501;
   padding: 96px;
 }
 
 .content-webinar {
-  text-align:center;
+  text-align: center;
 }
 
 .content-webinar > h3 {
-  margin-bottom:20px;
+  margin-bottom: 20px;
 }
 
 .content-webinar > p {
-  margin-bottom:40px;
+  margin-bottom: 40px;
 }
 
 /* tabla */
-.prices{
-  padding:96px 0;
+.prices {
+  padding: 96px 0;
 }
 
 .prices > h5 {
   margin-bottom: 30px;
 }
 
-.table-price{
-  /* width: 100%; */
-  /* le damos un ancho artificial con fines educativos porque la idea de una tabla es que si tiene muchos datos, se priorizaria como se muestran los datos */
-  width: 800px;
+.table-price {
+  width: 100%;
   /* sirve para evitar bordes entre las celdas de la tabla que vienen por defecto */
   border-collapse: collapse;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
 }
 
 .table-price td {
   padding: 16px;
 }
 
-.table-price tr:nth-of-type(odd) td{
-  background-color: #FED501;
+.table-price tr:nth-of-type(odd) td {
+  background-color: #fed501;
   /* border-radius: 10px; */
 }
 
-.table-price tr td:first-child{
+.table-price tr td:first-child {
   border-top-left-radius: 10px;
   border-bottom-left-radius: 10px;
 }
 
-.table-price tr td:last-child{
+.table-price tr td:last-child {
   border-top-right-radius: 10px;
   border-bottom-right-radius: 10px;
 }
@@ -210,22 +214,23 @@ p, a {
   gap: 40px;
 }
 
-.card{
+.card {
   display: flex;
   flex-direction: column;
-  gap:20px;
+  gap: 20px;
 }
 
 .img-card-top {
-  min-height:230px;
+  min-height: 230px;
   text-align: center;
 }
 
 .text-card {
-  font-size:1.05rem;
+  font-size: 1.05rem;
 }
 
-.text-card, .card h5 {
+.text-card,
+.card h5 {
   text-align: center;
 }
 
@@ -242,7 +247,7 @@ p, a {
 
   .questions {
     flex-direction: column;
-    padding:20px;
+    padding: 20px;
   }
 
   .webinar {
@@ -253,7 +258,12 @@ p, a {
     width: 100%;
     padding: 48px 20px;
     overflow: scroll;
-    margin:20px;
+    margin: 20px;
+  }
+
+  .table-price {
+    /* le damos un ancho artificial con fines educativos porque la idea de una tabla es que si tiene muchos datos, se priorizaria como se muestran los datos */
+    width: 800px;
   }
 
   .cards {
