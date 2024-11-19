@@ -242,4 +242,8 @@ p, a {
     flex-direction: column;
     padding:20px;
   }
+
+  .webinar {
+    padding: 48px 20px;
+  }
 }
