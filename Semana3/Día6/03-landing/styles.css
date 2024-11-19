@@ -168,7 +168,9 @@ p, a {
 }
 
 .table-price{
-  width: 100%;
+  /* width: 100%; */
+  /* le damos un ancho artificial con fines educativos porque la idea de una tabla es que si tiene muchos datos, se priorizaria como se muestran los datos */
+  width: 800px;
   /* sirve para evitar bordes entre las celdas de la tabla que vienen por defecto */
   border-collapse: collapse;
   font-family: 'Montserrat', sans-serif;
@@ -245,5 +247,11 @@ p, a {
 
   .webinar {
     padding: 48px 20px;
+  }
+
+  .prices {
+    width: 100%;
+    padding: 48px 20px;
+    overflow: scroll;
   }
 }
