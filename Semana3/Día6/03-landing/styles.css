@@ -249,6 +249,11 @@ a {
   /* display:none; */
 }
 
+/* por defecto los iconos del menú desplegable, no se debe mostrar */
+.open-menu, .close-menu {
+  display: none;
+}
+
 @media screen and (width <= 800px) {
   .cabecera {
     padding: 24px;
@@ -278,5 +283,19 @@ a {
   .cards {
     flex-direction: column;
     padding: 20px;
+  }
+
+  .main-links {
+    /* apariencia */
+    background-color: #007CC2;
+    flex-direction: column;
+    width: 100vw;
+    height: 100vh;
+    padding: 60px;
+    gap: 40px;
+    font-size: 2rem;
+    /* posicionamiento */
+    position: fixed;
+
   }
 }
