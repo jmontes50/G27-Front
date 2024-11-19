@@ -296,6 +296,22 @@ a {
     font-size: 2rem;
     /* posicionamiento */
     position: fixed;
+    top: 0;
+    /* oculto hacia la derecha */
+    /* right: -100vw; */
+  }
 
+  .open-menu {
+    display: block;
+    /* cambia el cursor a una manito indicando que es un elemento clickeable */
+    cursor: pointer;
+  }
+
+  .close-menu {
+    display: block;
+    cursor: pointer;
+    position:absolute;
+    top: 30px;
+    right:30px;
   }
 }
