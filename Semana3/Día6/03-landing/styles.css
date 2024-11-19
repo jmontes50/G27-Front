@@ -32,25 +32,25 @@ li {
 
 h1 {
   /* font-size: 4.5rem; */
-  font-size: calc(4vw + 1.5rem);
+  font-size: calc(4vw + 1rem);
 }
 h2 {
-  font-size: calc(3vw + 1.5rem);
+  font-size: calc(3vw + 1rem);
 }
 h3 {
-  font-size: calc(2.5vw + 1.5rem);
+  font-size: calc(2.5vw + 1rem);
 }
 h4 {
-  font-size: calc(1.5vw + 1.5rem);
+  font-size: calc(1.5vw + 1rem);
 }
 h5 {
-  font-size: calc(1vw + 1.5rem);
+  font-size: calc(1vw + 1rem);
 }
 h6 {
-  font-size: calc(0.5vw + 1.5rem);
+  font-size: calc(0.5vw + 1rem);
 }
 p, a {
-  font-size: calc(1vw + 1rem);
+  font-size: calc(0.25vw + 1rem);
   font-family: 'Montserrat', sans-serif;
 }
 
@@ -234,7 +234,7 @@ p, a {
 }
 
 @media screen and (width <= 800px) {
-  .contenedor {
+  .cabecera {
     padding: 24px;
   }
 }
