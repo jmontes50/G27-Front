@@ -240,6 +240,15 @@ a {
   width: 100%;
 }
 
+/* estilos menu responsive */
+
+#checkmenu {
+  /* esta ahí pero no se ve */
+  visibility: hidden; 
+  /* NO esta ahi, para el html no existe */
+  /* display:none; */
+}
+
 @media screen and (width <= 800px) {
   .cabecera {
     padding: 24px;
