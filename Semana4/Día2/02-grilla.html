@@ -50,14 +50,21 @@
             </code>
           </h2>
           <p>
-
+            Recordemos que bootstrap utiliza breakpoints para menos de 576px es '', sm de 576px para arriba, md de 768px para arriba, lg de 992px para arriba, xl para 1200px para arriba. Al indicar un breakpoint se aplicará solamente el que coincida con las columnas con los breakpoints indicados... (como los mediaqueries)
           </p>
-          <div class="col-8 bg-info">
+          <!-- si mides más o igual de 768px ocuparas 8 y 4 respectivamente. pero si es menor a ese tamaño ocupará 12 columnas -->
+          <div class="col-12 col-md-8 bg-info">
             Importante!
           </div>
-          <div class="col-4 bg-warning">
+          <div class="col-12 col-md-4 bg-warning">
             Secundario
           </div>
+          <!-- nuevas columnas -->
+           <div class="col-lg-6 col-md-8 col-sm-12 bg-info">Principal</div>
+           <div class="col-lg-3 col-md-4 col-sm-6 bg-warning">
+            noticia 2
+          </div>
+          <div class="col-lg-3 col-md-12 col-sm-6 bg-info">noticia 3</div>
         </div>
       </section>
     </main>
