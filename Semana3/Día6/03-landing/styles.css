@@ -269,7 +269,7 @@ a {
   }
 
   .prices {
-    width: 100%;
+    /* width: 100%; */
     padding: 48px 20px;
     overflow: scroll;
     margin: 20px;
