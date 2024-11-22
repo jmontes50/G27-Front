@@ -6,7 +6,8 @@ El objetivo es representar los siguientes layouts. No busques perfección, busca
 2. Identifica que layout, herramientas de css y bootstrap te pueden servir.
 3. Recuerda, bootstrap sigue siendo CSS solo que tienes clases que te facilitan el trabajo.
 
-**TIP:** No revises la estructura de cada ejercicio con el inspeccionador de elementos. Primero intenta acercarte utilizando la documentación.
+> [!TIP] 
+> No revises la estructura de cada ejercicio con el inspeccionador de elementos. Primero intenta acercarte utilizando la documentación.
 
 ## Reto 1
 Columnas con contenido. Desarrolla 01 de los siguientes layouts:
