@@ -23,6 +23,21 @@
         <a class="navbar-brand">
           Logo
         </a>
+        <!-- navbar-toggler solo aparecerá según el breakpoint que tiene navbar-expand -->
+        <button 
+          class="navbar-toggler"
+          data-bs-toggle="collapse"
+          data-bs-target="#idContenidoNav"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <!-- lo que pongamos en collapse y navbar-collapse se ocultará si el contenido a colapsado por el navbar-expand -->
+        <div
+          class="collapse navbar-collapse"
+          id="idContenidoNav"
+        >
+          Hola
+        </div>
       </div>
     </nav>
 
