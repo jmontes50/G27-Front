@@ -18,12 +18,19 @@
         }
       }
     </script>
+    <style type="text/tailwindcss">
+      @layer base{
+        h1 {
+          @apply text-3xl font-semibold;
+        }
+      }
+    </style>
   </head>
   <body>
     <!-- predeterminadamente, tienes un reset y el tipo de fuente, tailwind no te va a dar más al inicio -->
     <header class="border-solid border-green-600 border-2 flex justify-center items-center p-6 m-6 rounded-xl">
       <!-- a través de sus clases utilitarias crees lo que desees-->
-      <h1 class="text-3xl font-semibold text-blue-700">
+      <h1 class="text-blue-700">
         Hola mundo!
       </h1>
       <!-- indicando el breakpoint sm md lg xl 2xl como prefijo y despues un : podemos hacer que se apliquen propiedades de forma condicional  -->
