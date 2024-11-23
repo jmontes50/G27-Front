@@ -24,6 +24,24 @@
           @apply text-3xl font-semibold;
         }
       }
+
+      @layer components {
+        .card {
+          @apply bg-white rounded-lg border-2 shadow-md
+        }
+
+        .img-card-square {
+          @apply w-full aspect-square
+        }
+
+        .title-card {
+          @apply text-xl font-semibold
+        }
+
+        .text-card {
+          @apply text-gray-800
+        }
+      }
     </style>
   </head>
   <body>
@@ -81,17 +99,17 @@
           </div>
         </div>
         <!-- tarjeta -->
-        <div class="bg-white rounded-lg border-2 shadow-md">
+        <div class="card">
           <img 
             src="https://picsum.photos/400/300"
             alt="imagen card" 
-            class="w-full aspect-square" 
+            class="img-card-square" 
           />
           <div class="p-4">
-            <h2 class="text-xl font-semibold">
+            <h2 class="title-card">
               Producto
             </h2>
-            <p class="text-gray-800">
+            <p class="text-card">
               Lorem ipsum dolor sit amet, consectetur adipisicing elit. At, iste!
             </p>
           </div>
