@@ -5,6 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <!-- sirve para añadir código de javascript -->
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              // gray: '#333333',
+              cafe: '#581845'
+            }
+          }
+        }
+      }
+    </script>
   </head>
   <body>
     <!-- predeterminadamente, tienes un reset y el tipo de fuente, tailwind no te va a dar más al inicio -->
@@ -36,7 +49,7 @@
             class="w-full aspect-square" 
           />
           <div class="p-4">
-            <h2 class="text-xl font-semibold">
+            <h2 class="text-xl font-semibold text-cafe">
               Producto
             </h2>
             <p class="text-gray-800">
@@ -52,7 +65,7 @@
             class="w-full aspect-square" 
           />
           <div class="p-4">
-            <h2 class="text-xl font-semibold">
+            <h2 class="text-xl font-semibold bg-cafe text-white">
               Producto
             </h2>
             <p class="text-gray-800">
