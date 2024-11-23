@@ -10,8 +10,11 @@ El objetivo es que, para cada ejercicio presentado con un ejemplo en HTML y CSS 
     - https://umeshmk.github.io/Tailwindcss-cheatsheet/
 3. Puedes utilizar iconos como imagenes de: https://boxicons.com/
 
+> [!IMPORTANT]
+> No busques perfección, busca acercarte y mejorar en cada iteración.
+
 > [!TIP]
-> No busques perfección, busca acercarte y mejorar en cada iteración
+> Pueden utilizar https://play.tailwindcss.com/ que es un playground onlined de tailwind
 
 ### **Ejercicio 1: Construir un Header con navegación**
 
