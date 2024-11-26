@@ -32,9 +32,18 @@ let soleado = false;
 
 console.log(llueve);
 
-//undefined, no tiene un valor definido
+//undefined, no tiene un valor definido, NO ES DELIBERADO
 let pago;
 console.log(pago);
 
+//null, no tiene un valor definido, ES DELIBERADO
 let esNulo = null;
 console.log(esNulo);
+
+//tengan cuidado con las mayúsculas, caseSensitive
+
+//typeof es una utilidad que me permite mostrar el tipo de dato de algo
+console.log(typeof apellido);
+console.log(typeof edad);
+console.log(typeof llueve);
+console.log(typeof esNulo);
