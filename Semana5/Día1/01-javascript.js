@@ -43,7 +43,21 @@ console.log(esNulo);
 //tengan cuidado con las mayúsculas, caseSensitive
 
 //typeof es una utilidad que me permite mostrar el tipo de dato de algo
+//tenemos tipos de datos primitivos
 console.log(typeof apellido);
 console.log(typeof edad);
 console.log(typeof llueve);
+
 console.log(typeof esNulo);
+
+//sentencia, asignando un valor, es dar una orden
+let x = 100;
+
+//expresion es x por si solo, una expresión s algo que me da y representa un valor
+console.log(x);
+
+let a = 50;
+
+let b = 75;
+
+console.log(a + b);
