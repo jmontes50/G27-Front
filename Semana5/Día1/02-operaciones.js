@@ -10,9 +10,16 @@ que usariamos nosotros en general + -  *  /
 
 //comentario de una sola línea
 let precioTotal = procesador + memoria + placaMadre;
-console.log(precioTotal);
+console.log("El precio total es:", precioTotal);
 
 // resta
 let descuentoFijo = 75;
 let precioDescontado = precioTotal - descuentoFijo;
-console.log(precioDescontado);
+console.log("El precio ya con dscto es:", precioDescontado);
+
+let precioPorDos = precioDescontado * 2;
+console.log("Este es el precio por 02 unid.:", precioPorDos);
+
+let precioConIGV = precioPorDos * 1.17;
+console.log("precio con impuestos", precioConIGV);
+
