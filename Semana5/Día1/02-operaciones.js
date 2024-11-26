@@ -53,3 +53,7 @@ console.log(a);
 // a = a - 6;
 a-=6;
 console.log(a);
+
+//módulo aritmético
+let residuo = 100 % 3;
+console.log("este es el residuo: ",residuo);
