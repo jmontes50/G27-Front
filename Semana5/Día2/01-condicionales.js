@@ -37,6 +37,7 @@ if (numeroSecreto === numeroJugador) {
 }
 */
 
+/*
 let numeroSecreto = 24;
 let numeroAEvaluar = 24;
 
@@ -45,4 +46,19 @@ if(numeroSecreto !== numeroAEvaluar) {
   console.log("Perdiste GG");
 } else {
   console.log("Ganaste premio");
+}
+*/
+
+//Mi farma, A partir de 60 años tienes 10% de descuento;
+
+//con el +prompt convertimos la entrada a número
+let edad = +prompt("Ingrese su edad");
+
+console.log("La edad:", edad);
+console.log("El tipo:", typeof edad);
+
+if(edad >= 60) {
+  console.log("Tiene su 10% de descuento");
+} else {
+  console.log("Lo sentimos no tiene descuento... todavía");
 }
