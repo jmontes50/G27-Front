@@ -22,6 +22,7 @@ if(nota >= 13) {
 }
 */
 
+/*
 let numeroSecreto = 26;
 
 //+prompt busca convertir lo ingresado a un number
@@ -33,4 +34,15 @@ if (numeroSecreto === numeroJugador) {
   console.log("Ganaste");
 }else{
   console.log("Perdiste, no adivinaste");
+}
+*/
+
+let numeroSecreto = 24;
+let numeroAEvaluar = 24;
+
+//!== diferente de
+if(numeroSecreto !== numeroAEvaluar) {
+  console.log("Perdiste GG");
+} else {
+  console.log("Ganaste premio");
 }
