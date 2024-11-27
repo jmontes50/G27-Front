@@ -9,6 +9,7 @@ if(expresión si es V Ó F) {
     pero si es Falso se ejecutará este otro bloque
 } */
 
+/*   
 let nota = 10;
 
 //expresión
@@ -19,4 +20,17 @@ if(nota >= 13) {
 } else {
   console.log("No aprobo 😔 ");
 }
+*/
 
+let numeroSecreto = 26;
+
+//+prompt busca convertir lo ingresado a un number
+let numeroJugador = +prompt("Ingrese el número para adivinar");
+//usando == solo comparamos el valor de la condicional no el tipo
+//lo recomendable es SIEMPRE usar === para comparar valor y tipo de dato
+// if (numeroSecreto == numeroJugador) {
+if (numeroSecreto === numeroJugador) {
+  console.log("Ganaste");
+}else{
+  console.log("Perdiste, no adivinaste");
+}
