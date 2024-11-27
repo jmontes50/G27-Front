@@ -17,7 +17,7 @@ let saludo = "Hola";
 
 let nombre = "José";
 
-//backtick
+//backtick ``
 let resultado = `${ nombre } dice ${saludo}`;
 
 console.log(resultado);
