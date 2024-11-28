@@ -28,3 +28,21 @@ switch(numMes) {
     default:
         console.log("El mes indicado no esta dentro del rango")
 }
+
+//--------------------------------------------
+//si un numero esta en un rango determinado
+
+let numero = +prompt("Ingrese su edad");
+
+// switch(numero) {
+switch(true) {
+    case numero > 0 && numero < 12:
+        console.log("Eres un niño(a)");
+        break;
+    case numero > 12 && numero < 20:
+        console.log("Eres un adolescente");
+        break;
+    default:
+        console.log("Esta fuera del rango");   
+}
+
