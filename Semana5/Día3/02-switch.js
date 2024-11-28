@@ -34,6 +34,7 @@ switch(numMes) {
 
 let numero = +prompt("Ingrese su edad");
 
+// utilicen un else if
 // switch(numero) {
 switch(true) {
     case numero > 0 && numero < 12:
