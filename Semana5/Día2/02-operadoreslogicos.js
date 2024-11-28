@@ -16,12 +16,23 @@ if(edad >= 18 && acepto === true) {
 }
 
 */
-
+/*
 let usuario = prompt("Introduce tu rol, (admin, supervisor, usuario");
 
 console.log("Ud. ha indicado: ", usuario);
 
 if (usuario === "admin" || usuario === "supervisor") {
+    console.log("Ud. tiene acceso a reportes");
+} else {
+    console.log("Ud. no tiene los permisos para ver los reportes");
+}
+*/
+
+let rol = prompt("Introduce tu rol, (admin, supervisor, usuario");
+
+console.log("Ud. ha indicado: ", rol);
+
+if (rol === "admin" || rol === "supervisor") {
     console.log("Ud. tiene acceso a reportes");
 } else {
     console.log("Ud. no tiene los permisos para ver los reportes");
