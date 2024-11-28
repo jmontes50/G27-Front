@@ -29,7 +29,21 @@ if (num > 8) {
   console.log("Debe ser mayor que 0");
 } 
 
+//truthy falsy, valores como el 0 el "" '' ``, undefined y null se consideran FALSE
+
 //else if
 let correo = "usuario@gmail.com";
 let contrasena = "";
 let aceptoTerminos = false;
+
+if(!correo){
+    console.log("El correo es obligatorio.");
+    //si el valor de la contraseña es "" se considera un valor falsy, que es false, al negarlo se convierte en un true
+}else if (!contrasena) {
+    console.log("La contraseña es obligatoria");
+    //si es que el usuario no aceptará los terminos que son falsos al negarlo se convertiria en verdadero
+}else if (!aceptoTerminos) {
+    console.log("Debes aceptar los términos de uso");
+}else {
+    console.log("La información llenado de forma correcta");
+}
