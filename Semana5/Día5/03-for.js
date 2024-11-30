@@ -23,7 +23,7 @@ console.log("------------------------");
 */
 
 //control de cuentas
-let cantCompras = +prompt("Cuantas compras hiciste?");
+let cantCompras = +prompt("Cuantas compras hiciste?"); //3
 let costoTotal = 0;
 
 for(let i = 1; i <= cantCompras; i++) {
