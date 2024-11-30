@@ -23,7 +23,7 @@ let mes = +prompt("Ingrese el número del mes");
 //damos las condiciones pero negamos para que pregunte en caso no cumpla que sea entre 1 y 12
 while(!(mes >= 1 && mes <= 12)) {
     //si no es valido preguntaremos de nuevo
-    mes = +prompt('Número inválido, pruebe de nuevo');
+    let mes = +prompt('Número inválido, pruebe de nuevo');
 }
 
 //imprimimos el resultado
