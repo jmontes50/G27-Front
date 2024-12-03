@@ -15,4 +15,12 @@ console.log(gato);
 //notación de punto objeto.propiedad
 console.log(gato.nombre);
 console.log(gato.color);
+//notación de corchetes
 console.log(gato["anio-nacimiento"]);
+
+//desestructuración, yo ya conozco que propiedades tiene un objeto
+
+// let { listas propiedades } = nombre objeto
+let { edad, nombre } = gato;
+console.log("desestructuración: ", edad);
+console.log("desestructuración: ", nombre);
