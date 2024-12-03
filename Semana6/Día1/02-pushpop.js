@@ -27,7 +27,10 @@ console.log("4. ", productos);
 productos.unshift("WebCam");
 
 console.log("5. ", productos);
+//splice, remover X cantidad de elementos
+//en una determinada posición/indice
 
+//splice(posición, cantidad)
 productos.splice(2, 1);
 
 console.log("6. ", productos);
