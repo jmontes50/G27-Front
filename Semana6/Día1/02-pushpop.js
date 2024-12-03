@@ -17,3 +17,13 @@ console.log("2. ", productos);
 productos.push("Teclado");
 
 console.log("3. ", productos);
+
+//shift, remover 01 item del inicio
+productos.shift();
+
+console.log("4. ", productos);
+
+//unshift, agregar 01 elemento al inicio
+productos.unshift("WebCam");
+
+console.log("5. ", productos);
