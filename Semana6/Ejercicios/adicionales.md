@@ -126,12 +126,6 @@ societyName(["Phoebe", "Chandler", "Rachel", "Ross", "Monica", "Joey"]); // ➞ 
 - Transformación de texto a mayúsculas con `.toUpperCase()`.
 
 
-Aquí tienes el tercer ejercicio con el formato acordado:
-
-markdown
-Copiar código
----
-
 ## Ejercicio 3: Secret Society
 
 ### ENUNCIADO
@@ -143,26 +137,22 @@ Un grupo de amigos ha decidido iniciar una sociedad secreta. El nombre de la soc
 societyName(["Adam", "Sarah", "Malcolm"]); // ➞ "AMS"
 societyName(["Harry", "Newt", "Luna", "Cho"]); // ➞ "CHLN"
 societyName(["Phoebe", "Chandler", "Rachel", "Ross", "Monica", "Joey"]); // ➞ "CJMPRR"
-javascript
-Copiar código
-function societyName(names) {
-  // Tu código aquí
-}
-IDEAS INDIVIDUALES
-Acceder a la primera letra de cada nombre.
-Convertir todas las letras a mayúsculas.
-Ordenar las letras alfabéticamente.
-Unir las letras en un solo string.
-PLANTEAMIENTO DE IDEAS
-Iterar sobre el arreglo de nombres para extraer la primera letra de cada elemento.
-Convertir cada letra a mayúscula usando .toUpperCase().
-Ordenar las letras con .sort().
-Unir las letras en un único string usando .join("").
-IDENTIFICACIÓN DE PATRONES
-Uso de propiedades de strings para acceder a caracteres individuales (texto[0]).
-Métodos de arreglos como .map(), .sort(), y .join().
-Transformación de texto a mayúsculas con .toUpperCase().
-PSEUDOCÓDIGO O PISTA
+```
+### IDEAS INDIVIDUALES
+- Acceder a la primera letra de cada nombre.
+- Convertir todas las letras a mayúsculas.
+- Ordenar las letras alfabéticamente.
+- Unir las letras en un solo string.
+### PLANTEAMIENTO DE IDEAS
+- Iterar sobre el arreglo de nombres para extraer la primera letra de cada elemento.
+- Convertir cada letra a mayúscula usando .toUpperCase().
+- Ordenar las letras con .sort().
+- Unir las letras en un único string usando .join("").
+### IDENTIFICACIÓN DE PATRONES
+- Uso de propiedades de strings para acceder a caracteres individuales (texto[0]).
+- Métodos de arreglos como .map(), .sort(), y .join().
+- Transformación de texto a mayúsculas con .toUpperCase().
+### PSEUDOCÓDIGO O PISTA
 
 ```plaintext
 1. Crear un arreglo con la primera letra de cada nombre.
