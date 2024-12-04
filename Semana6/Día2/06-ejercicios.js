@@ -8,7 +8,7 @@ Devolver el total de números pares encontrados.
  */
 
 //Definir una función contarPares que reciba un array como parámetro:
-function contarPares (arreglo){
+function contarPares (arreglo = [1, 2, 3]){
     console.log(arreglo.length);
     // Inicializar un contador en 0.
     let contador = 0;
@@ -29,4 +29,7 @@ function contarPares (arreglo){
 
 let resultado = contarPares([10, 15, 23, 46, 100, 200, 5]);
 
-console.log(`La cantidad de pares en el arreglo es ${resultado}`)
+console.log(`La cantidad de pares en el arreglo es ${resultado}`);
+
+let resultado2 = contarPares();
+console.log(`La cantidad de pares en el arreglo es ${resultado2}`);
