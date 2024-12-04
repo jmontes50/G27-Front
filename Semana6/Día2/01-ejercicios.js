@@ -20,3 +20,5 @@ while (contador < 10) {
     }
     indice++; //1*7 , 2*7, 3*7
 }
+
+
