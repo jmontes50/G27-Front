@@ -56,3 +56,8 @@ Definir una función encontrarMaximo que reciba un array como parámetro:
     Retornar el valor de max.
 ```
 
+## Solución
+
+Busca plantear tu, tu propia solución y si ves la solución, busca plantearlo de manera diferente. Esto ayuda a involucrarse con la sintaxis del lenguaje y mejora el pensamiento computacional.
+
+[Ver posible solución](./Ejercicio8.js)
