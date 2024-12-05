@@ -46,3 +46,21 @@ console.log(resultado);
 
 /**Utilizando el arreglo de productos previo, realice un inventario e indique el valor de los activos totales, la idea es dar el valor actual en base a la cantidad y al precio de cada producto y se indique un solo valor(number) con todo la lista de productos y sus cantidades consideradas.*/
 
+function resumenActivos (inventario) {
+    let sumaTotal = 0;
+    
+    for(let i = 0; i < inventario.length; i++){
+        //i aumentará de 0 a 1, 2 etc hasta que no encuentre productos
+        let totalPorProducto = inventario[i].precio * inventario[i].cantidad;
+        console.log(`total por ${inventario[i].nombre} es ${totalPorProducto}`);
+        //acumulamos el activo por producto en sumaTotal
+        // sumaTotal = sumaTotal + totalPorProducto;
+        sumaTotal += totalPorProducto;
+    }
+    //cuando termine esto
+    return sumaTotal;
+}
+
+let resultadoActivos = resumenActivos(productos);
+
+console.log(`La suma total de los activos es ${resultadoActivos}`);
