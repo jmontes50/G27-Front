@@ -69,3 +69,25 @@ if(opcion === 1){
 //--------------------
 console.log(typeof artista.albums[0].lanzamiento);
 console.log(artista.albums[0].formato[1]);
+
+//SEGÚN EL COLOR DESEAMOS INDICAR UN NIVEL DE RIESGO
+//VERDE ES SEGURO, AMARILLO ES ADVERTENCIA, ROJO ES PELIGRO
+/*
+let color = "amarillo";
+
+if(color === "red"){
+  console.log("PELIGROOOO");
+} else if (color === "amarillo"){
+  console.log("ADVERTENCIA");
+} else if (color === "verde"){
+  console.log("SEGURO");
+}
+
+let mensajes = {
+  red: "PELIGROOOOO",
+  amarillo: "ADVERTENCIA",
+  verde: "SEGURO"
+}
+
+console.log(mensajes[color])
+*/
