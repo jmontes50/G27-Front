@@ -19,3 +19,8 @@ console.log("Origen: ", artista["origen"]);
 //como estar declarando variables con nombres de propiedades de un objeto
 let { anioInicio, anioFinal } = artista;
 console.log("Año Inicio:", anioInicio);
+
+//deseamos solamente acceder a pop que esta en genero
+// console.log(artista.genero);
+console.log("dot notation: ", artista.genero[1]);
+console.log("bracket notation", artista["genero"][1]);
