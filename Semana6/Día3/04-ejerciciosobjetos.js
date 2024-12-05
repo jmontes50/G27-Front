@@ -43,3 +43,6 @@ function filtrarPorPrecio (arreglo) {
 
 let resultado = filtrarPorPrecio(productos);
 console.log(resultado);
+
+/**Utilizando el arreglo de productos previo, realice un inventario e indique el valor de los activos totales, la idea es dar el valor actual en base a la cantidad y al precio de cada producto y se indique un solo valor(number) con todo la lista de productos y sus cantidades consideradas.*/
+
