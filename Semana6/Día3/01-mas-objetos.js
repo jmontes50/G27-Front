@@ -8,13 +8,13 @@ let artista = {
   albums: [
     {
       nombreAlbum: "La voz de los 80's",
-      lanmiento: "13 Noviembre",
+      lanzamiento: "13 Noviembre",
       formato: ["casete","LP", "CD"]
     },
     {
       nombreAlbum: "Pateando piedras",
       lanzamiento: "15 Setiembre 1986",
-      formto: ["casete", "LP", "ciudad"]
+      formato: ["casete", "LP", "ciudad"]
     }
   ]
 }
@@ -37,3 +37,35 @@ console.log("Año Inicio:", anioInicio);
 // console.log(artista.genero);
 console.log("dot notation: ", artista.genero[1]);
 console.log("bracket notation", artista["genero"][1]);
+
+//accedemos 1ero a artista -> albums -> [1] -> nombreAlbum
+console.log(artista.albums[1].nombreAlbum);
+
+//bracket notation
+console.log(artista["albums"][0]["lanzamiento"]);
+
+let propiedad = "formato";
+//bracket notation donde el texto es una variable
+console.log(artista["albums"][0][propiedad]);
+
+function mostrarInfoAlbums (nombrePropiedad) {
+  let resultado = artista.albums[0][nombrePropiedad];
+  console.log(resultado)
+}
+
+let opcion = +prompt(`Ingrese la información de lo que desee mostrar
+  1. nombre Album
+  2. lanzamiento
+  3. formato`)
+
+if(opcion === 1){
+  mostrarInfoAlbums("nombreAlbum")
+} else if(opcion === 2){
+  mostrarInfoAlbums("lanzamiento")
+} else if(opcion === 3){
+  mostrarInfoAlbums("formato")
+}
+
+//--------------------
+console.log(typeof artista.albums[0].lanzamiento);
+console.log(artista.albums[0].formato[1]);
