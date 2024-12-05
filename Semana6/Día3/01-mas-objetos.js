@@ -3,7 +3,20 @@ let artista = {
   origen: "Chile",
   genero: ["Rock", "Pop", "Punk"],
   anioInicio: 1983,
-  anioFinal: 2006
+  anioFinal: 2006,
+  //los albums son varios, pero necesitamos presentarlos
+  albums: [
+    {
+      nombreAlbum: "La voz de los 80's",
+      lanmiento: "13 Noviembre",
+      formato: ["casete","LP", "CD"]
+    },
+    {
+      nombreAlbum: "Pateando piedras",
+      lanzamiento: "15 Setiembre 1986",
+      formto: ["casete", "LP", "ciudad"]
+    }
+  ]
 }
 
 console.log(artista);
