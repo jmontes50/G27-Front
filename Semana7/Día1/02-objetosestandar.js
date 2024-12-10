@@ -20,3 +20,9 @@ console.log(frase.indexOf("Haz")); //ubicar un texto o letra y retornar la prime
 console.log(frase.includes("compitas")); //indica si una letra o palabra esta dentro de otro texto;
 
 console.log(frase.includes("gato")); //si no lo encuentra da false
+
+console.log(frase.split(" ")); //convierte el texto a array en base al carácter que se de como argumento
+
+let textoMal = "     palabras   ";
+
+console.log(textoMal.trim())
