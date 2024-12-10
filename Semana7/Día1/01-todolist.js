@@ -49,17 +49,34 @@ let todoList = {
     let posicion = this.encontrarTarea(id);
     console.log(posicion);
     this.tareas[posicion].activo = false;
+  },
+  listarTareas: function() {
+    //mostrar tareas activas, con un console.table, y retorne el arreglo de las tareas
+    let tareasActivas = [];
+    for(let i = 0; i < this.tareas.length; i++) {
+      //la tarea que en este momento estemos usando mediante la posición i, esta activa?
+      if(this.tareas[i].activo === true){
+        //si es que esta activa, la agregamos a tareasActivas
+        tareasActivas.push(this.tareas[i]);
+      }
+    }
+    console.log("lista tareas activas", tareasActivas);
+    return tareasActivas;
   }
 }
 
 //ejecutando el método agregarTarea
 todoList.agregarTarea("Ir al médico");
 todoList.agregarTarea("Ir al veterinario");
+todoList.agregarTarea("Comprar pastillas");
+todoList.agregarTarea("Tomar agua");
 
 todoList.completarTarea(2);
 
 todoList.eliminarTarea(2);
 
+todoList.listarTareas();
+
 //observando
-console.log(todoList);
-console.table(todoList.tareas);
+// console.log(todoList);
+// console.table(todoList.tareas);
