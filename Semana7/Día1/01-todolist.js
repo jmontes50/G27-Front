@@ -42,6 +42,10 @@ let todoList = {
     }
     //al encontrar, retornamos la posición ya encontrada
     return posicion;
+  },
+  eliminarTarea: function(id) {
+    let posicion = this.encontrarTarea(id);
+    console.log(posicion);
   }
 }
 
@@ -50,6 +54,8 @@ todoList.agregarTarea("Ir al médico");
 todoList.agregarTarea("Ir al veterinario");
 
 todoList.completarTarea(2);
+
+todoList.eliminarTarea(2);
 
 //observando
 console.log(todoList);
