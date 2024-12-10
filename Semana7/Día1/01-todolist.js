@@ -17,7 +17,8 @@ let todoList = {
       //id: todoList.tareas.length + 1,
       id: this.tareas.length + 1,
       descripcion: descripcion,
-      finalizado: false
+      finalizado: false,
+      activo: true
     }
     //lo agregamos a la propiedad tareas
     todoList.tareas.push(nuevaTarea);
@@ -43,9 +44,11 @@ let todoList = {
     //al encontrar, retornamos la posición ya encontrada
     return posicion;
   },
+  //mas que eliminar es desactivar
   eliminarTarea: function(id) {
     let posicion = this.encontrarTarea(id);
     console.log(posicion);
+    this.tareas[posicion].activo = false;
   }
 }
 
