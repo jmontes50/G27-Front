@@ -25,4 +25,4 @@ console.log(frase.split(" ")); //convierte el texto a array en base al carácter
 
 let textoMal = "     palabras   ";
 
-console.log(textoMal.trim())
+console.log(textoMal.trim());
