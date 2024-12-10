@@ -17,3 +17,26 @@ console.log("año", anioNuevo.getFullYear());
 console.log("mes",anioNuevo.getMonth());
 
 console.log("Día",anioNuevo.getDate());
+
+//el tiempo que me da el timestamp es en milisegundos
+console.log(ahora.getTime())
+
+let diasHastaNavidad = navidad.getTime() - ahora.getTime();
+
+console.log(diasHastaNavidad);
+
+let segundos = diasHastaNavidad / 1000;
+
+console.log("segundos", segundos);
+
+let minutos = segundos / 60;
+
+console.log("minutos", minutos);
+
+let horas = minutos / 60;
+
+console.log("horas", horas);
+
+let dias = horas / 24;
+
+console.log("dias", dias);
