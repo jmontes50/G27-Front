@@ -24,6 +24,10 @@ let todoList = {
   },
   completarTarea: function(id) {
     // this.tareas[2].finalizado = true
+    let posicion = this.encontrarTarea(id);
+    // console.log("Posicion", posicion);
+    this.tareas[posicion].finalizado =  true;
+    console.log(`la tarea ${this.tareas[posicion].descripcion} se completó!`);
   },
   encontrarTarea: function(id) {
     //devolverme la posición de la tarea que buscariamos
@@ -44,6 +48,8 @@ let todoList = {
 //ejecutando el método agregarTarea
 todoList.agregarTarea("Ir al médico");
 todoList.agregarTarea("Ir al veterinario");
+
+todoList.completarTarea(2);
 
 //observando
 console.log(todoList);
