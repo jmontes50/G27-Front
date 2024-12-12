@@ -25,7 +25,10 @@ let inventario = {
     this.productos.push(nuevoProducto);
   },
   actualizarCantidad: function(nombre, cantidad) {
+    //encontrando el producto
     let indice = this.encontrarProductoPorNombre(nombre);
+    //actualizar mediante la posición 
+    this.productos[indice].cantidad = cantidad;
   },
   encontrarProductoPorNombre: function(nombre){
     //findIndex me da -1 si es que no encuentro nada y 0 ó + en caso encuentre la posición de lo que estemos buscando
@@ -39,7 +42,11 @@ let inventario = {
 inventario.agregarProducto("Chocolate", 5, 20);
 inventario.agregarProducto("Pavos", 100, 10, false);
 
-console.table(inventario.productos);
+console.table("1", inventario.productos);
 
-let a = inventario.encontrarProductoPorNombre("Chocolate");
-console.log({ a });
+// let a = inventario.encontrarProductoPorNombre("Chocolate");
+// console.log({ a });
+
+inventario.actualizarCantidad("Pavos", 50);
+
+console.table("2", inventario.productos);
