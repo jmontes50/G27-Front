@@ -86,4 +86,19 @@ let total = productos.reduce(function(acumulador, item) {
     //si no le damos un valor inicial por defecto el acumulador, tomará como valor inicial el primer item, si es un objeto tomará ese valor, lo que puede ser problematico
 }, 0)
 
-console.log({ total })
+console.log({ total });
+
+console.log("///////////////////SORT TOSORTED///////////////");
+
+let nums = [4, 1, 3, 2, 5];
+
+//va a ver métodos como el sort() que modifican el arreglo original
+//la mayor parte del tiempo no es bueno que se modifique el origen del dato original
+// let ordenado = nums.sort();
+
+//utilizar métodos modernos para hacer operaciones
+let ordenado = nums.toSorted();
+
+console.log({ nums });
+
+console.log({ ordenado });
