@@ -36,6 +36,13 @@ let inventario = {
       return item.nombre === nombre
     })
     return posicion;
+  },
+  obtenerValorTotal: function(){
+    let total = this.productos.reduce(function(acumulador, item){
+      return acumulador + (item.precio * item.cantidad);
+      //le añadimos el 0 como 2do parámetro del reduce para que tome el acumulador tome el valor inicial de 0;
+    }, 0);
+    return total;
   }
 }
 
@@ -50,3 +57,6 @@ console.table("1", inventario.productos);
 inventario.actualizarCantidad("Pavos", 50);
 
 console.table("2", inventario.productos);
+
+let reporte = inventario.obtenerValorTotal();
+console.log({ reporte });
