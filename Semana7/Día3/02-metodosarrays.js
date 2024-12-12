@@ -57,3 +57,11 @@ console.log("/////////////// INCLUDES ///////////////////");
 let frutaExiste = frutas.includes("Mandarinas");
 
 console.log({ frutaExiste });
+
+console.log("////////////// REDUCE //////////////////");
+
+let sumatoria = numeros.reduce(function(acumulador, item) {
+    return acumulador + item;
+});
+
+console.log({ sumatoria });
