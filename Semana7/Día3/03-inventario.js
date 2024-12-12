@@ -17,7 +17,8 @@ let inventario = {
       // nombre: nombre,
       nombre,
       precio,
-      cantidad
+      cantidad,
+      active: true
     }
     console.log(nuevoProducto);
     //push para agregarlo a la propiedad productos de inventario
