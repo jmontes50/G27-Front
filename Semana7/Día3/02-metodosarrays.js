@@ -1,4 +1,4 @@
-let frutas = ["Kiwi", "Naranjas", "Fresas", "Sandía"];
+let frutas = ["Kiwi", "Naranjas", "Fresas", "Sandía", "Sandía"];
 
 //herramientas para trabajar con arreglos
 console.log("///////////////// FOREACH //////////////////")
@@ -37,3 +37,23 @@ let mayorQue80 = numeros.filter(function(item, indice, arreglo) {
 })
 
 console.log({ mayorQue80 });
+
+console.log("/////////////// FINDINDEX ///////////////////");
+
+//findIndex va a buscar un item y me indicará la posición en la que está
+let dondeEsta = frutas.findIndex(function(fru) {
+    //me pide una expresión para encontrar la posición de un item
+    //en caso haya 2 ó más items con el mismo valor me dará el 1ero que encuentre
+    return fru === "Sandía";
+    //si es algo que no existe me dará -1
+    // return fru === "Mandarinas";
+});
+
+console.log({ dondeEsta });
+
+console.log("/////////////// INCLUDES ///////////////////");
+
+//según si un valor este incluido o no, me dará true o false
+let frutaExiste = frutas.includes("Mandarinas");
+
+console.log({ frutaExiste });
