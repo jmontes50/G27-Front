@@ -15,7 +15,7 @@ let forEachFrutas = frutas.forEach(function (fru, indice, arreglo) {
 });
 
 // console.log({ forEachFrutas });
-console.log("///////////////// MAP //////////////////")
+console.log("///////////////// MAP //////////////////");
 
 //map a comparación del forEach si me retorna algo
 let frutasEnMayus = frutas.map(function(fru, indice, arreglo){
@@ -25,3 +25,15 @@ let frutasEnMayus = frutas.map(function(fru, indice, arreglo){
 });
 
 console.log({ frutasEnMayus });
+
+console.log("////////////// FILTER ///////////////////");
+
+let numeros = [100, 87, 92, 60, 95];
+
+//filtrará y generará un nuevo arreglo con los items que cumplan la condición
+let mayorQue80 = numeros.filter(function(item, indice, arreglo) {
+    // return expresionVerdadera y solamente retornará los elementos que sean verdaderos en base a la expresión 
+    return item > 90;
+})
+
+console.log({ mayorQue80 });
