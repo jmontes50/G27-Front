@@ -19,7 +19,8 @@ console.log("mes",anioNuevo.getMonth());
 console.log("Día",anioNuevo.getDate());
 
 //el tiempo que me da el timestamp es en milisegundos
-console.log(ahora.getTime())
+//es la cantidad de milisegundos desde el 01 de enero de 1970
+console.log(ahora.getTime());
 
 let diasHastaNavidad = navidad.getTime() - ahora.getTime();
 
