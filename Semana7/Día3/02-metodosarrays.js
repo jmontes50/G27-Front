@@ -65,3 +65,25 @@ let sumatoria = numeros.reduce(function(acumulador, item) {
 });
 
 console.log({ sumatoria });
+
+console.log("////////////// REDUCE CON OBJETOS ///////////");
+
+let productos = [
+    {
+      nombre: "Pastillas",
+      precio: 3.50
+    },
+    {
+      nombre: "Agua",
+      precio: 1.20
+    }
+]
+
+//array.reduce(function(acum, item), valorInicialAcum)
+let total = productos.reduce(function(acumulador, item) {
+    console.log("acumulador: ", acumulador);
+    return acumulador + item.precio;
+    //si no le damos un valor inicial por defecto el acumulador, tomará como valor inicial el primer item, si es un objeto tomará ese valor, lo que puede ser problematico
+}, 0)
+
+console.log({ total })
