@@ -3,4 +3,5 @@ const esPar = (num) => {
     return num % 2 === 0;
 }
 
+//la exportación por defecto se utiliza si solo se va a exportar 01 sola cosa
 export default esPar;
