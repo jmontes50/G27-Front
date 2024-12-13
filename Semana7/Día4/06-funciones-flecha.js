@@ -22,3 +22,11 @@
 const saludar = nombre => `Hola ${nombre}`;
 
 console.log(saludar("Elvis"));
+
+// const suma = (a, b) => {
+//   return a + b;
+// }
+
+const suma = (a, b) => a + b;
+
+console.log(suma(10, 20))
