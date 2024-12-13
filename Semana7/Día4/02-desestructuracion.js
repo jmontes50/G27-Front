@@ -1,5 +1,5 @@
 //cuando son varios parámetros y hay probabidad de error humano podemos desestructurar los parámetros y enviar un objeto
-function matricula({ nombre, telefono, direccion }) {
+function matricula({ direccion, telefono, nombre }) {
     console.log(`${nombre} con teléfono ${telefono} y dirección ${direccion}, se matrículo`);
 }
 
@@ -21,4 +21,4 @@ console.log(nombre);
 console.log(edad);
 
 // matricula(nombre, direccion, telefono);
-matricula(persona)
+matricula(persona);
