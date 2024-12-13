@@ -143,3 +143,7 @@ Crea un objeto `carrito` que permita:
 2. Crea `eliminarProducto(nombre)` para eliminar un producto.
 3. Usa `.reduce` en `calcularTotal()` para sumar el total.
 4. Itera sobre el arreglo para mostrar los productos.
+
+## SOLUCIONES
+
+La solución a cada ejercicio la pueden encontrar en el archivo [Soluciones.js](./soluciones/soluciones.js) ten en cuenta que estas soluciones usan métodos de arreglos, funciones flecha y const. asi que plantear tu propia solución es algo muy valioso para tu aprendizaje.
