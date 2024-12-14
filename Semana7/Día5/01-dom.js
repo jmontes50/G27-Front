@@ -51,3 +51,15 @@ raiz.innerHTML = `
 const footer = document.querySelector(".pie");
 
 footer.style.backgroundColor = "green";
+
+//me permite el querySelector usar sintaxís de CSS
+const inputCorreo = document.querySelector("input[type=email]");
+
+inputCorreo.style.border = "2px solid red";
+
+//querySelectorAll va a obtener todos los elementos en base al selector indicado
+const spans = document.querySelectorAll(".info");
+
+spans.forEach((item) => {
+    item.style.color = "yellow";
+})
