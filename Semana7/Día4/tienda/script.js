@@ -22,9 +22,20 @@ const tienda = {
     // console.log({ nombreBusquedaMayus });
     //método de arreglos que permite transformar un arreglo a otro arreglo
     const productosMayus = this.productos.map(function(item){
+      //hacemos una copia por separado de cada item del arreglo para en cada transformación cambiarle el nombre a mayús
       return { ...item, nombre:item.nombre.toUpperCase() }
     })
-    console.table(productosMayus);
+    // console.table(productosMayus);
+    const existe = productosMayus.findIndex((item) => {
+      //includes es un método que existe tanto para arrays como para strings
+      return item.nombre.includes(nombreBusquedaMayus);
+    })
+    //recordemos si findIndex da -1 es que no se encontró ninguna coincidencia
+    if (existe === -1){
+      return `No se encontró ningún producto con nombre ${nombre}`
+    }
+
+    return `al buscar ${nombre} se encontró ${this.productos[existe].nombre} en la posición ${existe}`;
   }
   /*
   // si intentamos usar una función flecha en un objeto no podremos acceder al this
@@ -42,5 +53,5 @@ let producto = {
 tienda.agregarProducto(producto);
 console.log(producto);
 console.table(tienda);
-tienda.buscarProductoPorNombre("Smartphone");
+console.log(tienda.buscarProductoPorNombre("smart"));
 
