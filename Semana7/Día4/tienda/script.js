@@ -26,12 +26,15 @@ const tienda = {
       return { ...item, nombre:item.nombre.toUpperCase() }
     })
     // console.table(productosMayus);
+    // const existe = productosMayus.findIndex((item) => item.nombre.includes(nombreBusquedaMayus));
     const existe = productosMayus.findIndex((item) => {
       //includes es un método que existe tanto para arrays como para strings
       return item.nombre.includes(nombreBusquedaMayus);
     })
+    
     //recordemos si findIndex da -1 es que no se encontró ninguna coincidencia
     if (existe === -1){
+      //un return me corta la ejecución de la función
       return `No se encontró ningún producto con nombre ${nombre}`
     }
 
