@@ -37,3 +37,13 @@ arregloLinks.forEach(function(elementoLi) {
         elementoLi.style.fontWeight = "bold";
     }
 })
+
+//es un selector de JS que utiliza en su argumento un selector con la forma de un selector de CSS
+const raiz = document.querySelector('#raiz');
+
+raiz.innerHTML = `
+    <section>
+        <h2>Navidad y código</h2>
+        <p>lorem</p>
+    </section>
+`;
