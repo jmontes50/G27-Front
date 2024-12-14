@@ -47,3 +47,7 @@ raiz.innerHTML = `
         <p>lorem</p>
     </section>
 `;
+
+const footer = document.querySelector(".pie");
+
+footer.style.backgroundColor = "green";
