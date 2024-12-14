@@ -6,6 +6,7 @@ const tienda = {
   productos: [...productos],
   agregarProducto: function(producto){
     let nuevoProducto = {
+      //copia de producto que llega como argumento
       ...producto,
       id: this.productos.length + 1
     }
