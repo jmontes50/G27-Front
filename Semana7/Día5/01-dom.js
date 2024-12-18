@@ -19,7 +19,7 @@ miTitulo.style.color = "red";
 //innerText cambia el contenido de un elemento
 miTitulo.innerText = "Bitácora";
 
-//obtenemos una lista de elementos con clase link
+//obtenemos una lista de elementos con clase link, HTMLCollection
 const links = document.getElementsByClassName("link");
 
 console.log("Links:", links);
@@ -41,6 +41,8 @@ arregloLinks.forEach(function(elementoLi) {
 //es un selector de JS que utiliza en su argumento un selector con la forma de un selector de CSS
 const raiz = document.querySelector('#raiz');
 
+console.log("raiz", raiz);
+
 raiz.innerHTML = `
     <section>
         <h2>Navidad y código</h2>
@@ -59,6 +61,8 @@ inputCorreo.style.border = "2px solid red";
 
 //querySelectorAll va a obtener todos los elementos en base al selector indicado
 const spans = document.querySelectorAll(".info");
+
+console.log("Spans", spans);
 
 spans.forEach((item) => {
     item.style.color = "yellow";
