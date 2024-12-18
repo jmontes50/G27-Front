@@ -56,5 +56,19 @@ const listaRegalos = document.querySelector(".listaRegalos");
 console.log(listaRegalos)
 
 //innerHTML inyecta texto/string como dentro de un elemento
+//reemplaza el HTML que tiene el elemento
 listaRegalos.innerHTML = htmlRegalos;
 
+//--------------------------
+//evento change, es un evento común en inputs, selects
+//es el evento que me va a detener un cambio
+
+const inputBusqueda = document.querySelector("#inputBusqueda");
+
+inputBusqueda.addEventListener("change", (ev) => {
+    //target --> objetivo
+    //de donde esta saliendo el evento
+    console.log("evento change", ev.target);
+    //value, me va a dar el valor/texto de un input
+    console.log("value:", ev.target.value);
+})
