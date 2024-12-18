@@ -29,3 +29,29 @@ formContacto.addEventListener("submit", (ev) => {
     ev.preventDefault();
     console.log("evento submit detenido")
 })
+
+//tenemos un arreglo de datos
+const arrRegalos = [
+    "Audifonos",
+    "Peluche",
+    "Rompecabezas",
+    "Libro",
+    "Parlante"
+]
+
+//a una variable vacia que sea string la llenaremos del html necesario
+let htmlRegalos = "";
+
+//estamos iterando en arrRegalos donde por cada item concatenamos en htmlRegalos un li con cada regalo
+arrRegalos.forEach((item) => {
+    htmlRegalos = htmlRegalos + `
+        <li>${item}</li>
+    `
+})
+
+// console.log(htmlRegalos);
+//despues de iterar lo agregamos a listaRegalos que es el <ul>
+const listaRegalos = document.querySelector(".listaRegalos");
+
+listaRegalos.innerHTML = htmlRegalos;
+
