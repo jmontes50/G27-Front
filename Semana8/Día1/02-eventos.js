@@ -71,4 +71,12 @@ inputBusqueda.addEventListener("change", (ev) => {
     console.log("evento change", ev.target);
     //value, me va a dar el valor/texto de un input
     console.log("value:", ev.target.value);
+
+    const textoABuscar = ev.target.value;
+
+    const regalosFiltrados = arrRegalos.filter((item) => {
+        return item.includes(textoABuscar)
+    })
+
+    console.log("regalos filtrados", regalosFiltrados)
 })
