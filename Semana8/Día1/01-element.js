@@ -24,6 +24,10 @@ console.log(codeH1);
 const imagen = document.createElement("img");
 console.log("imagen", imagen);
 imagen.src = "https://i.pinimg.com/550x/7c/18/65/7c186515514684275ffebddca96dab21.jpg";
+//element.setAttribute("nombreatributo", "valoratributo");
+imagen.setAttribute("alt", "mi ipad");
+//los valores con unidades se colocan como texto
+imagen.style.width = "300px";
 
 const regalosSection = document.querySelector("#regalos");
 
