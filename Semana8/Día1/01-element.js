@@ -32,3 +32,12 @@ imagen.style.width = "300px";
 const regalosSection = document.querySelector("#regalos");
 
 regalosSection.appendChild(imagen);
+
+//creemos el objeto párrafo
+const parrafoRegalos = document.createElement("p");
+//innerText es el texto del elemento
+parrafoRegalos.innerText = "Los mejores regalos para programadores(as)";
+//podemos ajustar propiedades
+parrafoRegalos.style.backgroundColor = "red";
+//añadirlo a otro elemento existente
+regalosSection.appendChild(parrafoRegalos);
