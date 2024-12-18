@@ -20,3 +20,12 @@ link.addEventListener("click", (evento) => {
     evento.preventDefault();
     alert("Diste click a un hipervínculo");
 })
+
+const formContacto = document.querySelector("#contacto");
+
+//el preventDefault también puede detener el evento por defecto de un
+//formulario que es el submit, que intenta enviar los datos por su cuenta
+formContacto.addEventListener("submit", (ev) => {
+    ev.preventDefault();
+    console.log("evento submit detenido")
+})
