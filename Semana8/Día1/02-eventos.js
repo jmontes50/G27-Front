@@ -78,5 +78,19 @@ inputBusqueda.addEventListener("change", (ev) => {
         return item.includes(textoABuscar)
     })
 
-    console.log("regalos filtrados", regalosFiltrados)
+    console.log("regalos filtrados", regalosFiltrados);
+
+    //limpiar listaRegalos
+    listaRegalos.innerHTML = "";
+
+    //después de limpiar listaRegalos
+    regalosFiltrados.forEach((item) => {
+        //item es cada regalo filtrado
+        //creamos un Li
+        const nuevoLi = document.createElement("li");
+        //cada Li le llenamos 01 texto del arreglo filtrado
+        nuevoLi.innerText = item;
+        //y ese Li lo añadimos al ul de listaRegalos
+        listaRegalos.appendChild(nuevoLi);
+    })
 })
