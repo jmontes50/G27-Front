@@ -41,3 +41,27 @@ parrafoRegalos.innerText = "Los mejores regalos para programadores(as)";
 parrafoRegalos.style.backgroundColor = "red";
 //añadirlo a otro elemento existente
 regalosSection.appendChild(parrafoRegalos);
+
+//combinando innerHTML con createElement
+const cabalasSection = document.querySelector("#cabalas");
+
+//1. crear el elemento
+//2. después añadirle el html a ESE elemento creado
+
+const cabala3 = "Barrer, limpieza del hogar";
+
+let ulCabalas = document.createElement("ul");
+
+ulCabalas.innerHTML = `
+    <li id="cabala1">Comer uvas</li>
+    <li id="cabala2">Lentejas en los bolsillos</li>
+    <li id="cabala3">${cabala3}</li>
+`;
+
+const liCabala1 = ulCabalas.querySelector("#cabala1");
+
+console.log("mi LI", liCabala1);
+
+liCabala1.innerText = "Comer 12 pasas";
+
+cabalasSection.appendChild(ulCabalas);
