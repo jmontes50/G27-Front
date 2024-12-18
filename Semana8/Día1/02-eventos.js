@@ -49,9 +49,12 @@ arrRegalos.forEach((item) => {
     `
 })
 
-// console.log(htmlRegalos);
+console.log(htmlRegalos);
 //despues de iterar lo agregamos a listaRegalos que es el <ul>
 const listaRegalos = document.querySelector(".listaRegalos");
 
+console.log(listaRegalos)
+
+//innerHTML inyecta texto/string como dentro de un elemento
 listaRegalos.innerHTML = htmlRegalos;
 
