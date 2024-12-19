@@ -10,7 +10,13 @@ const ComponenteTarea = (tarea) => {
     <input type="checkbox" class="checkTarea" />
   `;
   //más capaz de lógica
-  const checkBoxTarea = divTarea.querySelector(".checkTarea")
+  const checkBoxTarea = divTarea.querySelector(".checkTarea");
+  //si la propiedad finalizado de la tarea es TRUE
+  if(tarea.finalizado) {
+    //automaticamente marco el checkbox
+    checkBoxTarea.checked = true;
+  }
+  //accion de finalizar
   checkBoxTarea.addEventListener("click", () => {
     // alert(`Diste click en la tarea con id: ${tarea.id}`);
     //la propiedad checked me indica si el input esta marcado
