@@ -25,4 +25,12 @@ btnNuevaTarea.addEventListener("click", () => {
   const descripcionTarea = inputTarea.value;
   // console.log(descripcionTarea)
   tareas.agregarTarea(descripcionTarea);
+  
+  dibujarTareas();
 })
+
+const dibujarTareas = () => {
+  const listadoTareas = tareas.leerTareas();
+  console.table(listadoTareas);
+}
+

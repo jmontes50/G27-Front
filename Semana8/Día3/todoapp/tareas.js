@@ -20,6 +20,14 @@ const tareas = {
 
     console.log("mostrando tareas", this.estadoTareas);
   },
+  leerTareas: function () {
+    //retorne el estado de tareas
+    const tareasActivas = this.estadoTareas.filter((item) => {
+      return item.activo === true
+      // return item.activo
+    })
+    return tareasActivas;
+  }
 };
 
 export default tareas;
