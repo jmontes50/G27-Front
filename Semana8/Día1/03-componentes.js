@@ -16,6 +16,7 @@ const principal = document.querySelector("#principal");
 //que una función represente una parte de mi interfaz
 
 const Tarjeta = (item) => {
+    console.log("item:", item);
     //estamos creando 01 elemento div
     const divTarjeta = document.createElement("div");
     //lo estamos llenando de html
