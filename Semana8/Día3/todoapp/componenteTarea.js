@@ -15,10 +15,10 @@ const ComponenteTarea = (tarea) => {
     // alert(`Diste click en la tarea con id: ${tarea.id}`);
     //la propiedad checked me indica si el input esta marcado
     console.log(checkBoxTarea.checked);
-    // if(checkBoxTarea.checked){
-    //   tareas.finalizarTarea(tarea.id);
-    // }
-    // console.table(tareas.estadoTareas);
+    if(checkBoxTarea.checked){
+      tareas.finalizarTarea(tarea.id);
+    }
+    console.table(tareas.estadoTareas);
   })
 
 
