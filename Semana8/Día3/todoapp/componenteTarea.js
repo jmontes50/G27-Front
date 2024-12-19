@@ -1,3 +1,5 @@
+import tareas from "./tareas.js";
+
 const ComponenteTarea = (tarea) => {
   console.log("en componente tarea", tarea);
   //creamos un elemento div
@@ -8,6 +10,12 @@ const ComponenteTarea = (tarea) => {
     <input type="checkbox" class="checkTarea" />
   `;
   //más capaz de lógica
+  const checkBoxTarea = divTarea.querySelector(".checkTarea")
+  checkBoxTarea.addEventListener("click", () => {
+    alert(`Diste click en la tarea con id: ${tarea.id}`);
+  })
+
+
   return divTarea;
 }
 

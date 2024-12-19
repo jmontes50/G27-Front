@@ -35,6 +35,7 @@ const tareas = {
     })
     //cambiar su propiedad finalizado
     if(posicionTareaEncontrada !== -1){
+      //this.estadoTareas[1].finalizado = true
       this.estadoTareas[posicionTareaEncontrada].finalizado = true;
     }
   }
