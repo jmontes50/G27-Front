@@ -27,6 +27,16 @@ const tareas = {
       // return item.activo
     })
     return tareasActivas;
+  },
+  finalizarTarea: function(id) {
+    //encontrar tarea a finalizar, findIndex me da -1 si no encuentra algo y 0 a más dependiendo de la posición de lo que encuentre
+    const posicionTareaEncontrada = this.estadoTareas.findIndex((item) => {
+      return item.id === id
+    })
+    //cambiar su propiedad finalizado
+    if(posicionTareaEncontrada !== -1){
+      this.estadoTareas[posicionTareaEncontrada].finalizado = true;
+    }
   }
 };
 
