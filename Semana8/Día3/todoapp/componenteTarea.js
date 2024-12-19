@@ -7,3 +7,7 @@ const ComponenteTarea = (tarea) => {
   //más capaz de lógica
   return divTarea;
 }
+
+export {
+  ComponenteTarea
+}
