@@ -26,3 +26,19 @@ console.log(typeof productosJson);
 const deVuelta = JSON.parse(productosJson);
 
 console.log(deVuelta);
+
+//es un objeto, que tiene varios métodos
+//.setItem("nombre a guardar", lo que vamos a guardar)
+//Solamente guarda texto
+localStorage.setItem("nombre", "Jorge");
+
+localStorage.setItem("productos", productosJson);
+
+//getItem va a obtener la información segun la llave/clave
+const productosOtraVez = localStorage.getItem("productos");
+//podemos guardar información como texto
+//y leerla/utilizarla al obtener de nuevo con getItem
+console.log(productosOtraVez);
+
+const productosJS = JSON.parse(productosOtraVez);
+console.log("prodjs", productosJS);
