@@ -35,8 +35,9 @@ const hornear = () => {
     setTimeout(() => {
       const probabilidad = Math.random();
       console.log(probabilidad);
-      if (probabilidad >= 0.2) {
-        resolve("Torta Horneada")
+      if (probabilidad >= 0.9) {
+        const result = "Torta Horneada"
+        resolve(result)
       } else {
         reject("Torta quemada")
       }
@@ -44,9 +45,24 @@ const hornear = () => {
   });
 };
 
+const prepararCubierta = (torta) => {
+  return new Promise((resolve, reject) => {
+    //tarea asíncrona
+    setTimeout(() => {
+      resolve(`${torta} y cubierta preparada`);
+      // reject("se fundio el microondas");
+    }, 3000)
+  })
+}
+
 hornear()
 .then((res) => {
   console.log(res);
+  //encadenamiento de promesas, retorna una nueva promesa
+  return prepararCubierta(res);
+})
+.then((cubierta) => {
+  console.log(cubierta)
 })
 .catch((err) => {
   console.log(err);
