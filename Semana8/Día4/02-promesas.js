@@ -35,7 +35,7 @@ const hornear = () => {
     setTimeout(() => {
       const probabilidad = Math.random();
       console.log(probabilidad);
-      if (probabilidad >= 0.9) {
+      if (probabilidad >= 0.2) {
         const result = "Torta Horneada"
         resolve(result)
       } else {
