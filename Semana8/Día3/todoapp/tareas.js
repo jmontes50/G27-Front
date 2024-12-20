@@ -48,6 +48,20 @@ const tareas = {
     console.log("datos después de stringify", datosJSON);
     //ya esta convertido, entonces guardemoslo en LS
     localStorage.setItem("listaTareas", datosJSON);
+  },
+  //leer el LS por las tareas y con esa data
+  //actualizar la propiedad estadoTareas
+  leerDeLocalStorage: function() {
+    //obtenemos como JSON la lista de tareas
+    const tareasJSON = localStorage.getItem("listaTareas");
+    console.log("leyendo LS", tareasJSON);
+    //convertimos el JSON, a JS
+    const tareasComoArray = JSON.parse(tareasJSON);
+    console.log("ya convertido", tareasComoArray);
+    //ponerlo dentro de nuestras tareas
+    this.estadoTareas = [...tareasComoArray];
+
+    console.log("revisando las tareas", this.estadoTareas)
   }
 };
 

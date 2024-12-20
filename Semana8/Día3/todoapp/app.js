@@ -32,6 +32,7 @@ btnNuevaTarea.addEventListener("click", () => {
 })
 
 const dibujarTareas = () => {
+  tareas.leerDeLocalStorage();
   const listadoTareas = tareas.leerTareas();
   console.table(listadoTareas);
 
@@ -43,4 +44,7 @@ const dibujarTareas = () => {
     listaTareas.appendChild(elementoTarea);
   })
 }
+//hacemos que dibujar tareas se ejecute al inicio
+dibujarTareas();
 
+// tareas.leerDeLocalStorage();
