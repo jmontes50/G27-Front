@@ -32,7 +32,9 @@ btnNuevaTarea.addEventListener("click", () => {
 })
 
 const dibujarTareas = () => {
+  //actualiza la información a partir del LS
   tareas.leerDeLocalStorage();
+  //recién dibujalo
   const listadoTareas = tareas.leerTareas();
   console.table(listadoTareas);
 

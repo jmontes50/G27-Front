@@ -39,6 +39,7 @@ const tareas = {
     if(posicionTareaEncontrada !== -1){
       //this.estadoTareas[1].finalizado = true
       this.estadoTareas[posicionTareaEncontrada].finalizado = true;
+      this.guardarEnLocalStorage(this.estadoTareas);
     }
   },
   guardarEnLocalStorage: function(datos) {
