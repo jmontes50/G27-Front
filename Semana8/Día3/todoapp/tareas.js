@@ -17,6 +17,8 @@ const tareas = {
     }
     //lo añadimos a estadoTareas
     this.estadoTareas.push(nuevaTarea);
+    //cada vez que se agregue una tarea, guardo los datos
+    this.guardarEnLocalStorage(this.estadoTareas);
 
     console.log("mostrando tareas", this.estadoTareas);
   },
@@ -38,6 +40,14 @@ const tareas = {
       //this.estadoTareas[1].finalizado = true
       this.estadoTareas[posicionTareaEncontrada].finalizado = true;
     }
+  },
+  guardarEnLocalStorage: function(datos) {
+    console.log("datos antes de", datos)
+    //convertimos los datos de JS a JSON
+    const datosJSON = JSON.stringify(datos);
+    console.log("datos después de stringify", datosJSON);
+    //ya esta convertido, entonces guardemoslo en LS
+    localStorage.setItem("listaTareas", datosJSON);
   }
 };
 
