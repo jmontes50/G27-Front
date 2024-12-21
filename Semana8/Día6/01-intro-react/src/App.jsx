@@ -1,3 +1,6 @@
+//En react cuando importamos JSX o JS, no es necesario poner la extensión del archivo
+//si es un import "estilos.css" si es necesario poner la extensión, si es algo que no sea js
+import Titulo from "./Titulo";
 
 //1. si definimos 01 componente su nombre tiene que comenzar con Mayúscula
 const App = () => {
@@ -9,7 +12,10 @@ const App = () => {
   return (
     <div>
       {/* cada vez que deseemos mezclar o utilizar JS dentro del JSX tenemos que poner { js } */}
-      <h1>{titulo}</h1>
+      {/* <h1>{titulo}</h1> */}
+      {/* Para utilizar componentes lo vamos a poner como una etiqueta html */}
+      <Titulo />
+      <Titulo />
       <p>Lorem ipsum dolor sit amet.!!!! {10 + 20} </p>
       {/* es que toda etiqueta o componente tiene que estar cerrado, ya sea con una etiqueta de cierre o un autocierre*/}
       <hr />
