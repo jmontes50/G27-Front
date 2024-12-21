@@ -1,6 +1,7 @@
 //En react cuando importamos JSX o JS, no es necesario poner la extensión del archivo
 //si es un import "estilos.css" si es necesario poner la extensión, si es algo que no sea js
 import Titulo from "./Titulo";
+import Boton from "./Boton";
 
 //1. si definimos 01 componente su nombre tiene que comenzar con Mayúscula
 const App = () => {
@@ -27,6 +28,8 @@ const App = () => {
       <button onClick={() => alert('Hola Mundo!!!!')} >
         Click2!
       </button>
+      <hr />
+      <Boton texto="Click3" accion={saludar} />
       <hr />
     </div>
   )
