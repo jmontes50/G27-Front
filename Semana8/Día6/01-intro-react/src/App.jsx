@@ -14,8 +14,9 @@ const App = () => {
       {/* cada vez que deseemos mezclar o utilizar JS dentro del JSX tenemos que poner { js } */}
       {/* <h1>{titulo}</h1> */}
       {/* Para utilizar componentes lo vamos a poner como una etiqueta html */}
-      <Titulo />
-      <Titulo />
+      <Titulo texto="Holaaaaa mundoooo!" region="Lima" />
+      {/* Titulo(texto), Titulo("Holaaaa") */}
+      <Titulo texto="Hello Woooorld!!!" region="Arequipa"/>
       <p>Lorem ipsum dolor sit amet.!!!! {10 + 20} </p>
       {/* es que toda etiqueta o componente tiene que estar cerrado, ya sea con una etiqueta de cierre o un autocierre*/}
       <hr />

@@ -1,6 +1,6 @@
-const Titulo = () => {
+const Titulo = ({ texto, region }) => {
     return (
-        <h1>¡Hola, mundoooooo!</h1>
+        <h1>{texto} - {region}!</h1>
     );
 }
 
