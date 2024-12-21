@@ -16,7 +16,6 @@ const app = async () => {
     const card = divCard(producto);
     divRow.appendChild(card);
   });
-
 }
 
 const divCard = (producto) => {
