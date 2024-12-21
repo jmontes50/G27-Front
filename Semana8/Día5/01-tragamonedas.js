@@ -50,6 +50,7 @@ const jugar = async () => {
         console.log(res2)
         const res3 = await tragamonedas3();
         console.log(res3)
+        //Promise.race //Promise.all
     } catch (error) {
         console.log(error)
     }
