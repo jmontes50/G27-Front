@@ -3,6 +3,8 @@
 import Titulo from "./Titulo";
 import Boton from "./Boton";
 
+import "./estilos.css"; //al importar css en react estos estilos son accesibles desde cualquier componente
+
 //1. si definimos 01 componente su nombre tiene que comenzar con Mayúscula
 const App = () => {
 
@@ -24,7 +26,10 @@ const App = () => {
       <Titulo texto="Hello Woooorld!!!" region="Arequipa"/>
       <p>Lorem ipsum dolor sit amet.!!!! {10 + 20} </p>
       {/* es que toda etiqueta o componente tiene que estar cerrado, ya sea con una etiqueta de cierre o un autocierre*/}
-      <button onClick={saludar} >Click!</button>
+      {/* para añadir clases de css a JSX tenemos que utilizar className */}
+      <button onClick={saludar} className="texto-verde">
+        Click!
+      </button>
       <button onClick={() => alert('Hola Mundo!!!!')} >
         Click2!
       </button>
