@@ -1,5 +1,6 @@
 // fetch(url)  --> me va a dar una promesa
 //url404 - https://reqres.in/api/unknown/23
+/*
 fetch("https://reqres.in/api/users?page=2")
 .then((respuesta) => {
     //es la respuesta, guía de remisión, 
@@ -21,3 +22,19 @@ fetch("https://reqres.in/api/users?page=2")
 .catch((err) => { 
     console.log(err);
 })
+*/
+const obtenerUsuarios = async () => {
+    try {
+        const respuesta = await fetch("https://reqres.in/api/users?page=2");
+        console.log(respuesta);
+        if(respuesta.status === 200) {
+            const datos = await respuesta.json();
+            console.log(datos)
+        }else{
+            throw new Error("la petición no se completo");
+        }
+    } catch (error) {
+        console.log(error)
+    }
+}
+obtenerUsuarios();
