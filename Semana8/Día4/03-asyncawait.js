@@ -7,6 +7,9 @@
 const hornear = async () => {
     return "Torta Horneada"; //resolve
     // throw "Torta quemada"; //reject
+    // setTimeout(() => {
+    //     return "Torta Horneada"; //resolve
+    // }, 2000)
 }
 
 
