@@ -1,9 +1,11 @@
 import Formulario from "./Formulario"
+import Peticion from "./Peticion"
 
 const App = () => {
   return (
     <div>
-      <Formulario />
+      {/* <Formulario /> */}
+      <Peticion />
     </div>
   )
 }
