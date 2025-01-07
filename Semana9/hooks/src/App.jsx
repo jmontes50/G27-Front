@@ -44,8 +44,9 @@ const App = () => {
       <Dispara 
         texto="Actualizar" 
         ejecutar={manejarClick}
+        ejecutarConValor={setValor}
       />
-      <Observa />
+      <Observa numero={valor} />
     </div>
   );
 };

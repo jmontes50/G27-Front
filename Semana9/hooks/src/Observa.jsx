@@ -1,3 +1,3 @@
-export default function Observa () {
-    return <h2>Observa</h2>
+export default function Observa ({ numero }){
+    return <h2>Número es: {numero}</h2>
 }
