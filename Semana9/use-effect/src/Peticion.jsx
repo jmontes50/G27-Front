@@ -1,20 +1,36 @@
-import { useEffect } from "react"
+import { useState, useEffect } from "react";
 
 const Peticion = () => {
-  
+  const [productos, setProductos] = useState([]);
+
   useEffect(() => {
+    //1 hacemos la petición
     fetch("https://67661e3d410f84999656dd1e.mockapi.io/productos")
-    .then((respuesta) => {
-      return respuesta.json();
-    })
-    .then((data) => {
-      console.table(data)
-    })
-  }, [])
+      .then((respuesta) => {
+        //2. obtenemos la respuesta pero necesitamos la data, retornamos la promesa de .json
+        return respuesta.json();
+      })
+      .then((data) => {
+        //3. ya con la data, actualizamos el estado
+        console.table(data);
+        setProductos(data);
+      });
+  }, []);
 
   return (
-    <div>Peticion</div>
-  )
-}
+    <div>
+      <h1>Productos</h1>
+      {/* renderizado de listas, array de datos -----> array de jsx(divs) */}
+      {productos.map((item) => (
+        // se aplica la regla de solamente retornar 01 solo elemento, ya adentro puede ir más html/jsx
+        //pero cada uno de estos elementos necesita un key, que tiene que tener un valor único
+        <div key={item.id}>
+          <h3>{item.nombre}</h3>
+          <p>{item.descripcion}</p>
+        </div>
+      ))}
+    </div>
+  );
+};
 
-export default Peticion
+export default Peticion;
