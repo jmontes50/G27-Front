@@ -35,6 +35,9 @@ const App = () => {
       <button onClick={manejarClick}>
         Incrementar
       </button>
+      <button onClick={() => {
+        setNombre("Edmundo FuentesRivera") 
+      }}>Cambiar Nombre</button>
     </div>
   )
 }
