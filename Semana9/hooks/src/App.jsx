@@ -8,7 +8,6 @@ const calcular = (a, b) => {
 
 const App = () => {
   //const [elValorAUsar, laFuncionQueActualizaElValor] = useState(valorInicial)
-
   /**código tradicional en JS
    * let elValorAUsar = valorInicial
    * const laFuncionQueActualizaElValor = (nuevoValor) => {
