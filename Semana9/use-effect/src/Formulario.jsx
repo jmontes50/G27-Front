@@ -20,7 +20,7 @@ const Formulario = () => {
     //   alert("El nombre es muy largo");
     // }
     //solamente "escuche" los cambios de estado que le indiquemos en sus dependencias
-  }, []);
+  }, [apellido]);
 
   return (
     // <></> Fragment, no genera ninguna etiqueta pero si sirve para envolver otros elementos/etiquetas

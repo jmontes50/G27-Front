@@ -15,13 +15,14 @@ const Peticion = () => {
         console.table(data);
         setProductos(data);
       });
+      //Al hacer una petición es importante colocar como 2do argumento del useEffect un [] vacio, para que solo se ejecute 01 vez el useEffect
   }, []);
 
   return (
     <div>
       <h1>Productos</h1>
       {/* renderizado de listas, array de datos -----> array de jsx(divs) */}
-      {productos.map((item) => (
+      {productos.map((item, indice) => (
         // se aplica la regla de solamente retornar 01 solo elemento, ya adentro puede ir más html/jsx
         //pero cada uno de estos elementos necesita un key, que tiene que tener un valor único
         <div key={item.id}>
