@@ -16,7 +16,9 @@ const App = () => {
     console.log("Cambio!!!", categoria);
     const posicionEncontrada = categorias.findIndex((item) => item.categoria === categoria);
     console.log("Posición!", posicionEncontrada);
-    setProductos(categorias[posicionEncontrada].productos);
+    const productosEncontrados = categorias[posicionEncontrada].productos;
+    setProductos(productosEncontrados);
+    // setProductos([...productosEncontrados, "tarjeta de regalo"]);
   }, [categoria])
 
   return (
