@@ -1,12 +1,11 @@
-import { useState, useEffect, useRef } from 'react'
+import { useState, useEffect, useRef } from 'react';
+import Task from './components/Task';
 
 const App = () => {
   const [tareas, setTareas] = useState([]);
-  console.log(tareas)
 
   //es una referencia, pueden pensar en esto como un id que ofrece react para poder acceder a un elemento del DOM
   const nuevaTareaRef = useRef(null);
-
   const manejarClick = () => {
     // console.log(nuevaTareaRef.current.value);
     /**1, creamos nuevaTarea que contendra el value del input
@@ -18,7 +17,6 @@ const App = () => {
     //limpiar el input
     nuevaTareaRef.current.value = '';
   }
-
   return (
     <div>
       <h1>Todo App</h1>
@@ -31,6 +29,10 @@ const App = () => {
           ref={nuevaTareaRef}
         />
         <button onClick={manejarClick}>➕</button>
+        <hr/>
+        {tareas.map((tarea, indice) => (
+          <Task key={indice} textoTarea={tarea} />
+        ))}
       </div>
     </div>
   )
