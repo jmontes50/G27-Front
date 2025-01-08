@@ -32,6 +32,15 @@ const App = () => {
           </option>
         ))}
       </select>
+      
+      <hr />
+      <h2>Productos</h2>
+      <ul>
+        {productos.map((prod, i) => (
+          <li key={i}>{prod}</li>
+        ))}
+      </ul>
+      
     </div>
   )
 }
