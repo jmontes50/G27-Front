@@ -5,7 +5,7 @@ const App = () => {
   const nuevaTareaRef = useRef(null);
 
   const manejarClick = () => {
-    console.log(nuevaTareaRef);
+    console.log(nuevaTareaRef.current.value);
   }
 
   return (
