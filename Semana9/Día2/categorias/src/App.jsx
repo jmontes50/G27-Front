@@ -3,7 +3,7 @@ import categorias from './data';
 
 const App = () => {
   //categoria he seleccionado
-  const [categoria, setCategoria] = useState("");
+  const [categoria, setCategoria] = useState(categorias[0].categoria);
   //productos en base a la categoria
   const [productos, setProductos] = useState([]);
 
@@ -16,7 +16,8 @@ const App = () => {
     console.log("Cambio!!!", categoria);
     const posicionEncontrada = categorias.findIndex((item) => item.categoria === categoria);
     console.log("Posición!", posicionEncontrada);
-    const productosEncontrados = categorias[posicionEncontrada].productos;
+    //objeto?.propiedad estamos preguntando si la propiedad existe, si no existe me da un undefined, undefined es un valor falsy
+    const productosEncontrados = categorias[posicionEncontrada]?.productos || [];
     setProductos(productosEncontrados);
     // setProductos([...productosEncontrados, "tarjeta de regalo"]);
   }, [categoria])

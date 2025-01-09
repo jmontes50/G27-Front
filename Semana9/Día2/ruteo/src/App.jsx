@@ -11,7 +11,7 @@ const App = () => {
       <Routes>
         {/* para definir las rutas necesitas el componente Route, donde es obligatorio indicar la ruta(path) y el componente a mostrar(element) */}
         <Route path="/" element={<Inicio />} />
-        <Route path="/blog" element={<Blog />} />
+        <Route path="/bitacora" element={<Blog />} />
       </Routes>
     </BrowserRouter>
   )
