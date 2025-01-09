@@ -13,6 +13,7 @@ const Navigation = () => {
             <Link to="/" className="nav-link">
               Inicio
             </Link>
+            {/* el title en NavDropdown indica que texto aparecerá en la barra de navegación */}
             <NavDropdown title="Productos">
               <NavDropdown.Item>
                 <Link to="/createproduct" className="nav-link">
