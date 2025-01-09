@@ -5,7 +5,11 @@ const URL = "https://67661e3d410f84999656dd1e.mockapi.io/productos";
 const requestProducts = async () => {
   try {
     const response = await axios.get(URL);
-    console.log(response)
+    // console.log(response)
+    if(response.status === 200) {
+      return response.data; //si va bien retornamos los datos
+    }
+    throw new Error("Error al solicitar productos")
   } catch (error) {
     throw error;
   }
