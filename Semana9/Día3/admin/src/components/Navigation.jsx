@@ -15,16 +15,15 @@ const Navigation = () => {
             </Link>
             {/* el title en NavDropdown indica que texto aparecerá en la barra de navegación */}
             <NavDropdown title="Productos">
-              <NavDropdown.Item>
-                <Link to="/createproduct" className="nav-link">
+
+                <Link to="/createproduct" className="dropdown-item">
                   Crear Producto
                 </Link>
-              </NavDropdown.Item>
-              <NavDropdown.Item>
-                <Link to="#" className="nav-link">
+
+                <Link to="#" className="dropdown-item">
                   Info
                 </Link>
-              </NavDropdown.Item>
+
             </NavDropdown>
           </Nav>
         </Navbar.Collapse>
