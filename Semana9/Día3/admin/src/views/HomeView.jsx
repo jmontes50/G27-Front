@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { requestProducts } from "../services/productService";
+import TableData from "../components/TableData";
 
 const HomeView = () => {
   const [products, setProducts] = useState([]);
@@ -15,7 +16,10 @@ const HomeView = () => {
   }, []) //dejamos el array de dependencias de useEffect para que se ejecute solo 01 vez
 
   return (
-    <div>HomeView</div>
+    <div>
+      <h1>Panel</h1>
+      <TableData data={products} />
+    </div>
   )
 }
 
