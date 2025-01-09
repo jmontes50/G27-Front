@@ -9,8 +9,8 @@ const Navigation = () => {
           Admin 
         </Navbar.Brand>
         {/* NavbarToggle que es el botón cuando colapse */}
-        <Navbar.Toggle aria="nav" />
-        <Navbar.Collapse id="nav">
+        <Navbar.Toggle />
+        <Navbar.Collapse>
           <Nav className="me-auto">
             <Link to="/" className="nav-link">
               Inicio
