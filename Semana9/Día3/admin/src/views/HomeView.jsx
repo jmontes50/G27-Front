@@ -18,7 +18,7 @@ const HomeView = () => {
   }, []) //dejamos el array de dependencias de useEffect para que se ejecute solo 01 vez
 
   return (
-    <div>
+    <div className="container my-3">
       <h1>Panel</h1>
       <TableData data={products} cabeceras={cabeceras} />
     </div>
