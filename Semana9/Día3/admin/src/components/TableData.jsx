@@ -12,6 +12,14 @@ const TableData = (props) => {
           </tr>
         </thead>
         <tbody>
+          {data.map((item) => (
+            <tr key={item.id}>
+              {/* genere los td, otro renderizado de listas*/}
+              {cabeceras.map((cab, i) => (
+                <td key={i}>{item[cab]}</td>
+              ))}
+            </tr>
+          ))}
           {/**
          * data.map((item) => (
           <tr key={item.id}>
