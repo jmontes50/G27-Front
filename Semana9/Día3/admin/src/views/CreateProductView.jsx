@@ -1,6 +1,7 @@
 import { useState } from "react";
 import Input from "../components/Input";
 import { createProduct } from "../services/productService";
+import Swal from "sweetalert2";
 
 const CreateProductView = () => {
   const [producto, setProducto] = useState({
@@ -19,12 +20,17 @@ const CreateProductView = () => {
   const manejarSubmit = async (ev) => {
     ev.preventDefault();
     await createProduct(producto);
+    Swal.fire({
+      title:"Producto Creado",
+      text:`${producto.nombre} se creó con éxito!`,
+      icon: "success",
+    })
   }
 
   const inputsACrear = ["nombre", "descripcion", "precio"];
 
   return (
-    <div>
+    <div className="container my-3">
       <h1>Crear Producto</h1>
       <form onSubmit={manejarSubmit}>
         {inputsACrear.map((item, i) => (
