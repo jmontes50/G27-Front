@@ -19,7 +19,7 @@ const createProduct = async (newProduct) => {
   try {
     const response = await axios.post(URL, newProduct);
     console.log("response post", response)
-    return respuesta.data;
+    return response.data;
   } catch (error) {
     throw error
   }
