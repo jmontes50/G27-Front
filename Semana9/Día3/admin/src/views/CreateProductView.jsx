@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import Input from "../components/Input";
 import { createProduct } from "../services/productService";
 import Swal from "sweetalert2";
@@ -10,6 +11,8 @@ const CreateProductView = () => {
     precio: "",
   });
 
+  const navigate = useNavigate();
+
   const manejarInput = (ev) => {
     setProducto({
       ...producto,
@@ -20,11 +23,14 @@ const CreateProductView = () => {
   const manejarSubmit = async (ev) => {
     ev.preventDefault();
     await createProduct(producto);
-    Swal.fire({
+    await Swal.fire({
       title:"Producto Creado",
       text:`${producto.nombre} se creó con éxito!`,
       icon: "success",
     })
+    //esperamos a que se cierre la ventana de sweet alert
+    //y navegamos a la ruta que deseemos
+    navigate('/')
   }
 
   const inputsACrear = ["nombre", "descripcion", "precio"];
