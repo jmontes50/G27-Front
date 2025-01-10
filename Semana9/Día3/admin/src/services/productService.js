@@ -15,6 +15,17 @@ const requestProducts = async () => {
   }
 }
 
+const createProduct = async (newProduct) => {
+  try {
+    const response = await axios.post(URL, newProduct);
+    console.log("response post", response)
+    return respuesta.data;
+  } catch (error) {
+    throw error
+  }
+}
+
 export {
-  requestProducts
+  requestProducts,
+  createProduct
 }
