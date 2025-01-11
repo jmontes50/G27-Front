@@ -1,7 +1,7 @@
 //saber que producto -> obtener la data del producto -> editarla -> mandar la info editada
 import { useState, useEffect } from 'react';
 import { useParams } from "react-router-dom";
-import { requestProductById } from "../services/productService";
+import { requestProductById, editProduct } from "../services/productService";
 import Input from "../components/Input";
 
 const EditProductView = () => {
@@ -22,6 +22,11 @@ const EditProductView = () => {
     });
   };
 
+  const manejarSubmit = async (ev) => {
+    ev.preventDefault();
+    await editProduct(id, producto);
+  }
+
   const inputsACrear = ["nombre", "descripcion", "precio"];
 
   useEffect(() => {
@@ -35,7 +40,7 @@ const EditProductView = () => {
   return (
     <div className='container my-3'>
       <h1>Editar Producto</h1>
-      <form>
+      <form onSubmit={manejarSubmit}>
         {inputsACrear.map((item, i) => (
           <Input 
             key={i}
@@ -44,6 +49,9 @@ const EditProductView = () => {
             manejarValor={manejarInput}
           />
         ))}
+        <button className='btn btn-primary' type='submit'>
+          Editar
+        </button>
       </form>
     </div>
   )
