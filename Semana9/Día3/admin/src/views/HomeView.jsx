@@ -21,10 +21,13 @@ const HomeView = () => {
     // console.log({ isConfirmed, isDenied }) //booleanos
     if(isConfirmed){
       await deleteProduct(id);
-      Swal.fire({
+      await Swal.fire({
         title:"Se eliminó correctamente el producto",
         icon:"success"
       })
+      //filtrar y actualizar el estado
+      const productsFiltered = products.filter((prod) => prod.id !== id);
+      setProducts(productsFiltered);
     }
   }
 
