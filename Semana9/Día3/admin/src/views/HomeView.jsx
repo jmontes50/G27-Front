@@ -25,9 +25,10 @@ const HomeView = () => {
         title:"Se eliminó correctamente el producto",
         icon:"success"
       })
-      //filtrar y actualizar el estado
+      //1ra opción filtrar y actualizar el estado, consistencia
       const productsFiltered = products.filter((prod) => prod.id !== id);
       setProducts(productsFiltered);
+      //2da opción seria tener getProducts() afuera del useEffect y volverlo a llamar
     }
   }
 
