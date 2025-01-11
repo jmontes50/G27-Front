@@ -20,13 +20,17 @@ const TableData = (props) => {
               {cabeceras.map((cab, i) => (
                 <td key={i}>{item[cab]}</td>
               ))}
-              <td>
+              <td className="d-flex">
                 <Link 
                   to={`/editproduct/${item.id}`}
                   className="btn btn-warning btn-sm me-2"
                 >
                   <i className="fa-solid fa-pen"></i>
                 </Link>
+                {/* botón eliminar */}
+                <button className="btn btn-danger btn-sm">
+                  <i className="fa-solid fa-trash"></i>
+                </button>
               </td>
             </tr>
           ))}
