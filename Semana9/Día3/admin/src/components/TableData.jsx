@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom"
 
 const TableData = (props) => {
-  const { data, cabeceras } = props;
+  const { data, cabeceras, accionEliminar } = props;
   console.table(data);
 
   return (
@@ -28,7 +28,12 @@ const TableData = (props) => {
                   <i className="fa-solid fa-pen"></i>
                 </Link>
                 {/* botón eliminar */}
-                <button className="btn btn-danger btn-sm">
+                <button 
+                  className="btn btn-danger btn-sm"
+                  onClick={() => {
+                    accionEliminar(item.id)
+                  }}
+                >
                   <i className="fa-solid fa-trash"></i>
                 </button>
               </td>

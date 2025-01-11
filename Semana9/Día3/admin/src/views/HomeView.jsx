@@ -1,11 +1,15 @@
 import { useState, useEffect } from "react";
-import { requestProducts } from "../services/productService";
+import { requestProducts, deleteProduct } from "../services/productService";
 import TableData from "../components/TableData";
 
 const HomeView = () => {
   const [products, setProducts] = useState([]);
 
   const cabeceras = ["nombre", "descripcion", "precio"]
+
+  const manejarEliminar = async (id) => {
+    await deleteProduct(id);
+  }
 
   useEffect(() => {
     const getProducts = async () => {
@@ -20,7 +24,11 @@ const HomeView = () => {
   return (
     <div className="container my-3">
       <h1>Panel</h1>
-      <TableData data={products} cabeceras={cabeceras} />
+      <TableData 
+        data={products}
+        cabeceras={cabeceras}
+        accionEliminar={manejarEliminar} 
+      />
     </div>
   )
 }
