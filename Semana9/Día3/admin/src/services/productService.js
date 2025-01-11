@@ -47,9 +47,19 @@ const editProduct = async (id, productUpdated) => {
   }
 }
 
+const deleteProduct = async (id) => {
+  try {
+    const response = await axios.delete(`${URL}/${id}`);
+    return response.data;
+  } catch (error) {
+    throw error;
+  }
+}
+
 export {
   requestProducts,
   createProduct,
   requestProductById,
-  editProduct
+  editProduct,
+  deleteProduct
 }
