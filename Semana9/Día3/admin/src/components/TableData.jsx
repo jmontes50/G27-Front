@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom"
+
 const TableData = (props) => {
   const { data, cabeceras } = props;
   console.table(data);
@@ -18,6 +20,14 @@ const TableData = (props) => {
               {cabeceras.map((cab, i) => (
                 <td key={i}>{item[cab]}</td>
               ))}
+              <td>
+                <Link 
+                  to={`/editproduct/${item.id}`}
+                  className="btn btn-warning btn-sm me-2"
+                >
+                  Editar
+                </Link>
+              </td>
             </tr>
           ))}
           {/**
