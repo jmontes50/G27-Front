@@ -1,8 +1,9 @@
 //saber que producto -> obtener la data del producto -> editarla -> mandar la info editada
 import { useState, useEffect } from 'react';
-import { useParams } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
 import { requestProductById, editProduct } from "../services/productService";
 import Input from "../components/Input";
+import Swal from "sweetalert2";
 
 const EditProductView = () => {
   const [producto, setProducto] = useState({
@@ -15,6 +16,8 @@ const EditProductView = () => {
 
   const { id } = useParams();
 
+  const navigate = useNavigate();
+
   const manejarInput = (ev) => {
     setProducto({
       ...producto,
@@ -25,6 +28,14 @@ const EditProductView = () => {
   const manejarSubmit = async (ev) => {
     ev.preventDefault();
     await editProduct(id, producto);
+    //con el await de sweetalert esperamos a que se cierre la alerta
+    await Swal.fire({
+      title:"Producto Actualizado",
+      text:`${producto.nombre} se actualizo con éxito`,
+      icon: "success"
+    })
+    //navegamos a la vista principal
+    navigate('/');
   }
 
   const inputsACrear = ["nombre", "descripcion", "precio"];
