@@ -37,8 +37,19 @@ const requestProductById = async (id) => {
   }
 }
 
+const editProduct = async (id, productUpdated) => {
+  try {
+    const response = await axios.put(`${URL}/${id}`, productUpdated);
+    console.log(response);
+    return response.data;
+  } catch (error) {
+    throw error
+  }
+}
+
 export {
   requestProducts,
   createProduct,
-  requestProductById
+  requestProductById,
+  editProduct
 }
