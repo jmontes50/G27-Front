@@ -25,7 +25,20 @@ const createProduct = async (newProduct) => {
   }
 }
 
+const requestProductById = async (id) => {
+  try {
+    const response = await axios.get(`${URL}/${id}`);
+    if(response.status === 200) {
+      return response.data;
+    }
+    throw new Error("No se pudo obtener el producto")
+  } catch (error) {
+    throw error
+  }
+}
+
 export {
   requestProducts,
-  createProduct
+  createProduct,
+  requestProductById
 }
