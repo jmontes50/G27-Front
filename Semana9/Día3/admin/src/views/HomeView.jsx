@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { requestProducts, deleteProduct } from "../services/productService";
 import TableData from "../components/TableData";
+import Swal from "sweetalert2";
 
 const HomeView = () => {
   const [products, setProducts] = useState([]);
@@ -8,7 +9,23 @@ const HomeView = () => {
   const cabeceras = ["nombre", "descripcion", "precio"]
 
   const manejarEliminar = async (id) => {
-    await deleteProduct(id);
+    const { isConfirmed, isDenied } = await Swal.fire({
+      title:"Esta seguro(a) de eliminar el producto?",
+      text:"Esta acción es irreversible",
+      icon: "warning",
+      showDenyButton: true,
+      denyButtonText: "No, Denegar",
+      showConfirmButton: true,
+      confirmButtonText: "Si, eliminar"
+    })
+    // console.log({ isConfirmed, isDenied }) //booleanos
+    if(isConfirmed){
+      await deleteProduct(id);
+      Swal.fire({
+        title:"Se eliminó correctamente el producto",
+        icon:"success"
+      })
+    }
   }
 
   useEffect(() => {
