@@ -25,7 +25,7 @@ const TableData = (props) => {
                   to={`/editproduct/${item.id}`}
                   className="btn btn-warning btn-sm me-2"
                 >
-                  Editar
+                  <i className="fa-solid fa-pen"></i>
                 </Link>
               </td>
             </tr>
