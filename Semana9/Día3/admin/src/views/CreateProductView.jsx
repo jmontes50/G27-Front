@@ -9,6 +9,7 @@ const CreateProductView = () => {
     nombre: "",
     descripcion: "",
     precio: "",
+    imagen: null
   });
 
   const navigate = useNavigate();
@@ -47,6 +48,12 @@ const CreateProductView = () => {
             manejarValor={manejarInput}
           />
         ))}
+        {/* input file */}
+        <div className="mb-3">
+          <label htmlFor="imagen">Imagen</label>
+          <input type="file" className="form-control" id="imagen" />
+        </div>
+        
         <button type="submit" className="btn btn-primary">
           Guardar
         </button>
