@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import Input from "../components/Input";
 import { createProduct } from "../services/productService";
 import Swal from "sweetalert2";
+import uploadFile from "../services/supabaseService";
 
 const CreateProductView = () => {
   const [producto, setProducto] = useState({
@@ -31,6 +32,8 @@ const CreateProductView = () => {
 
   const manejarSubmit = async (ev) => {
     ev.preventDefault();
+    await uploadFile(archivo);
+    /*
     await createProduct(producto);
     await Swal.fire({
       title:"Producto Creado",
@@ -40,6 +43,7 @@ const CreateProductView = () => {
     //esperamos a que se cierre la ventana de sweet alert
     //y navegamos a la ruta que deseemos
     navigate('/')
+    */
   }
 
   const inputsACrear = ["nombre", "descripcion", "precio"];
