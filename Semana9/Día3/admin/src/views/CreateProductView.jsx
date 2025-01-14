@@ -32,9 +32,11 @@ const CreateProductView = () => {
 
   const manejarSubmit = async (ev) => {
     ev.preventDefault();
-    await uploadFile(archivo);
-    /*
-    await createProduct(producto);
+    //1. subimos la imagen y obtenemos la URL
+    const urlImagen = await uploadFile(archivo);
+    //2. creamos el producto
+    const nuevoProducto = { ...producto, imagen: urlImagen}
+    await createProduct(nuevoProducto);
     await Swal.fire({
       title:"Producto Creado",
       text:`${producto.nombre} se creó con éxito!`,
@@ -43,7 +45,7 @@ const CreateProductView = () => {
     //esperamos a que se cierre la ventana de sweet alert
     //y navegamos a la ruta que deseemos
     navigate('/')
-    */
+
   }
 
   const inputsACrear = ["nombre", "descripcion", "precio"];

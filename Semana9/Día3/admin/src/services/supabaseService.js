@@ -12,7 +12,7 @@ const uploadFile = async (archivo) => {
     } else {
       //obtenemos la URL del archivo
       const archivoURL = await supabase.storage.from(BUCKET_NAME).getPublicUrl(data.path);
-      return archivoURL;
+      return archivoURL.data.publicUrl;
     }
   } catch (error) {
     throw error
