@@ -9,8 +9,10 @@ const CreateProductView = () => {
     nombre: "",
     descripcion: "",
     precio: "",
-    imagen: null
+    imagen: "", //la url después que se haya subido a supabase
   });
+
+  const [archivo, setArchivo] = useState(null); //va a almacenar la imagen seleccionada por el input file
 
   const navigate = useNavigate();
 
@@ -20,6 +22,12 @@ const CreateProductView = () => {
       [ev.target.name]: ev.target.value,
     });
   };
+
+  const manejarInputFile = (ev) => {
+    const nuevoArchivo = ev.target.files[0];
+    console.log("input file", nuevoArchivo);
+    setArchivo(nuevoArchivo);
+  }
 
   const manejarSubmit = async (ev) => {
     ev.preventDefault();
@@ -51,7 +59,13 @@ const CreateProductView = () => {
         {/* input file */}
         <div className="mb-3">
           <label htmlFor="imagen">Imagen</label>
-          <input type="file" className="form-control" id="imagen" />
+          <input 
+            type="file" 
+            className="form-control" 
+            id="imagen" 
+            onChange={manejarInputFile} 
+            // multiple
+          />
         </div>
         
         <button type="submit" className="btn btn-primary">
