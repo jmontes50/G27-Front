@@ -1,6 +1,9 @@
 import axios from "axios";
 
-const URL = "https://67661e3d410f84999656dd1e.mockapi.io/productos";
+console.log("env", import.meta.env.VITE_API_URL);
+
+// const URL = "https://67661e3d410f84999656dd1e.mockapi.io/productos";
+const URL = import.meta.env.VITE_API_URL;
 
 const requestProducts = async () => {
   try {
