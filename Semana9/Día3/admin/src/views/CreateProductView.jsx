@@ -10,7 +10,7 @@ const CreateProductView = () => {
     nombre: "",
     descripcion: "",
     precio: "",
-    imagen: "", //la url después que se haya subido a supabase
+    // imagen: "", //la url después que se haya subido a supabase
   });
 
   const [archivo, setArchivo] = useState(null); //va a almacenar la imagen seleccionada por el input file
@@ -28,25 +28,30 @@ const CreateProductView = () => {
     const nuevoArchivo = ev.target.files[0];
     console.log("input file", nuevoArchivo);
     setArchivo(nuevoArchivo);
-  }
+  };
 
   const manejarSubmit = async (ev) => {
     ev.preventDefault();
-    //1. subimos la imagen y obtenemos la URL
-    const urlImagen = await uploadFile(archivo);
-    //2. creamos el producto
-    const nuevoProducto = { ...producto, imagen: urlImagen}
+    let nuevoProducto;
+    if (!archivo) {
+      //si archivo es null se considera falso, un !null se traduciria como un true, No se selecciono una imagen
+      nuevoProducto = { ...producto };
+    } else { //Y en el else, archivo si tendria un valor significaria que si se selecciono una imagen a subir
+      //1. subimos la imagen y obtenemos la URL
+      const urlImagen = await uploadFile(archivo);
+      //2. creamos el producto
+      nuevoProducto = { ...producto, imagen: urlImagen };
+    }
     await createProduct(nuevoProducto);
     await Swal.fire({
-      title:"Producto Creado",
-      text:`${producto.nombre} se creó con éxito!`,
+      title: "Producto Creado",
+      text: `${producto.nombre} se creó con éxito!`,
       icon: "success",
-    })
+    });
     //esperamos a que se cierre la ventana de sweet alert
     //y navegamos a la ruta que deseemos
-    navigate('/')
-
-  }
+    navigate("/");
+  };
 
   const inputsACrear = ["nombre", "descripcion", "precio"];
 
@@ -65,15 +70,15 @@ const CreateProductView = () => {
         {/* input file */}
         <div className="mb-3">
           <label htmlFor="imagen">Imagen</label>
-          <input 
-            type="file" 
-            className="form-control" 
-            id="imagen" 
-            onChange={manejarInputFile} 
+          <input
+            type="file"
+            className="form-control"
+            id="imagen"
+            onChange={manejarInputFile}
             // multiple
           />
         </div>
-        
+
         <button type="submit" className="btn btn-primary">
           Guardar
         </button>
