@@ -1,11 +1,13 @@
-
-const Padre = () => {
+const Padre = (props) => {
+  console.log(props);
+  const { children, titulo } = props;
   return (
     <div>
-        <h2>Parent</h2>
-        <hr />
+      <h2>Parent - {titulo}</h2>
+      <hr />
+      {children}
     </div>
-  )
-}
+  );
+};
 
-export default Padre
+export default Padre;
