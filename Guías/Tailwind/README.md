@@ -32,7 +32,22 @@ module.exports = {
 }
 ```
 
-#### 3. Importación de Base, Components y Utilities en `index.css`
+#### 3. Configuración de PostCSS
+
+Creemos el archivo `postcss.config.js` y añadamos el siguiente código:
+
+```js
+// postcss.config.js
+export default {
+    plugins: {
+      tailwindcss: {},
+      autoprefixer: {},
+    },
+  }
+  
+```
+
+#### 4. Importación de Base, Components y Utilities en `index.css`
 
 Crea un archivo `index.css` en la carpeta `src` (si no existe ya) y añade las siguientes líneas para importar las capas base, components y utilities de Tailwind:
 
@@ -48,11 +63,11 @@ Luego, asegúrate de importar `index.css`.
 import './index.css';
 ```
 
-#### 4. Utility Clases
+#### 5. Utility Clases
 
 Tailwind CSS utiliza clases utilitarias (utility classes) que son pequeñas clases predefinidas para aplicar estilos individuales, como márgenes, padding, colores, etc., directamente en los elementos HTML.
 
-#### 5. Ejemplo con Utility Clases
+#### 6. Ejemplo con Utility Clases
 
 A continuación, un ejemplo de un botón estilizado utilizando utility clases de Tailwind CSS:
 
