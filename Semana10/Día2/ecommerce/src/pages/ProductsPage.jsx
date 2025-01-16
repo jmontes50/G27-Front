@@ -1,4 +1,5 @@
 import useGetAxios from "../hooks/useGetAxios";
+import ProductCard from "../components/ui/ProductCard";
 
 const ProductsPage = () => {
   const URL =
@@ -16,7 +17,9 @@ const ProductsPage = () => {
       <div className="grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-4">
         {/* renderizado condicional */}
         {data
-          ? data.map((product) => <h2 key={product.id}>{product.nombre}</h2>)
+          ? data.map((product) => (
+              <ProductCard key={product.id} product={product} />
+            ))
           : null}
       </div>
     </div>
