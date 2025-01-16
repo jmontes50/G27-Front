@@ -10,9 +10,9 @@ const ProductsPage = () => {
   // console.log("data", data);
   // console.log("loading", loading);
   // console.log("error", error);
-  if(loading){
+  // if(loading){
     return <Loading />
-  }
+  // }
 
   return (
     <div className="px-4 py-10 mx-auto lg:px-8 xl:max-w-7xl">
