@@ -20,7 +20,7 @@ const ProductDetailPage = () => {
   return (
     <div className="px-4 py-10 mx-auto lg:px-8 xl:max-w-7xl">
       <div className="grid grid-cols-1 gap-10 md:grid-cols-2">
-        <div className="object-cover w-full h-full overflow-hidden aspect-auto">
+        <div className="object-cover w-full h-full overflow-hidden">
           <img src={imagen} alt={nombre} className="w-full"/>
         </div>
         <div className="mt-2">
@@ -30,6 +30,9 @@ const ProductDetailPage = () => {
             <span className="line-through text-slate-600">S/ {precio.toFixed(2)}</span>
           </div>
           <p className="mb-5">{descripcion}</p>
+          <button className="btn btn-black">
+            Agregar a carrito
+          </button>
         </div>
       </div>
     </div>
