@@ -1,17 +1,25 @@
+import { useState } from "react";
 import useGetAxios from "../hooks/useGetAxios";
 import ProductCard from "../components/ui/ProductCard";
 import Loading from "../components/ui/Loading";
 
 const ProductsPage = () => {
-  const URL =
-    "https://json-server-vercel-git-main-osmar-montesinos-projects.vercel.app/products?_page=1";
+  const [page, setPage] = useState(1);
+
+  const URL = `https://json-server-vercel-git-main-osmar-montesinos-projects.vercel.app/products?_page=${page}`;
   const { data, loading, error } = useGetAxios(URL);
 
-  // console.log("data", data);
-  // console.log("loading", loading);
-  // console.log("error", error);
-  if(loading){
-    return <Loading />
+  const previousPage = () => {
+    if (page === 1) return; //prevenir que vaya a algo menos de 1
+    setPage(page - 1);
+  };
+
+  const nextPage = () => {
+    setPage(page + 1);
+  };
+
+  if (loading) {
+    return <Loading />;
   }
 
   return (
@@ -27,8 +35,18 @@ const ProductsPage = () => {
           : null}
       </div>
       <div className="flex justify-between mt-4">
-        <button className="px-3 py-2 text-white bg-black rounded justify-self-start">Ver menos</button>
-        <button className="px-3 py-2 text-white bg-black rounded justify-self-end">Ver más</button>
+        <button
+          className="px-3 py-2 text-white bg-black rounded justify-self-start"
+          onClick={previousPage}
+        >
+          Ver menos
+        </button>
+        <button
+          className="px-3 py-2 text-white bg-black rounded justify-self-end"
+          onClick={nextPage}
+        >
+          Ver más
+        </button>
       </div>
     </div>
   );
