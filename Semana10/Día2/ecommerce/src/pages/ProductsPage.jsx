@@ -4,7 +4,7 @@ import Loading from "../components/ui/Loading";
 
 const ProductsPage = () => {
   const URL =
-    "https://json-server-vercel-git-main-osmar-montesinos-projects.vercel.app/products";
+    "https://json-server-vercel-git-main-osmar-montesinos-projects.vercel.app/products?_page=1";
   const { data, loading, error } = useGetAxios(URL);
 
   // console.log("data", data);
@@ -25,6 +25,10 @@ const ProductsPage = () => {
               <ProductCard key={product.id} product={product} />
             ))
           : null}
+      </div>
+      <div className="flex justify-between mt-4">
+        <button className="px-3 py-2 text-white bg-black rounded justify-self-start">Ver menos</button>
+        <button className="px-3 py-2 text-white bg-black rounded justify-self-end">Ver más</button>
       </div>
     </div>
   );
