@@ -2,6 +2,7 @@ import { useParams } from "react-router-dom";
 import useGetAxios from "../hooks/useGetAxios";
 import Loading from "../components/ui/Loading";
 import Stars from "../components/ui/Stars";
+import ProductQuantity from "../components/Product/ProductQuantity";
 
 const ProductDetailPage = () => {
   
@@ -32,9 +33,15 @@ const ProductDetailPage = () => {
             <span className="line-through text-slate-600">S/ {precio.toFixed(2)}</span>
           </div>
           <p className="mb-5">{descripcion}</p>
-          <button className="btn btn-black">
-            Agregar a carrito
-          </button>
+
+          <div className="flex">
+            <ProductQuantity />
+
+            <button className="btn btn-black">
+              Agregar a carrito
+            </button>
+          </div>
+          
         </div>
       </div>
       {/* detalles */}
