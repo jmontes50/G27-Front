@@ -19,7 +19,7 @@ const ProductDetailPage = () => {
 
   return (
     <div className="px-4 py-10 mx-auto lg:px-8 xl:max-w-7xl">
-      <div className="grid grid-cols-1 gap-10 md:grid-cols-2">
+      <div className="grid grid-cols-1 gap-10 mb-8 md:grid-cols-2">
         <div className="object-cover w-full h-full overflow-hidden">
           <img src={imagen} alt={nombre} className="w-full"/>
         </div>
@@ -34,6 +34,11 @@ const ProductDetailPage = () => {
             Agregar a carrito
           </button>
         </div>
+      </div>
+      {/* detalles */}
+      <div className="pt-5 border-t-2 border-slate-300">
+        <h4 className="mb-5 text-xl font-semibold">Detalles</h4>
+        <p className="whitespace-pre-wrap">{detalles}</p>
       </div>
     </div>
   )
