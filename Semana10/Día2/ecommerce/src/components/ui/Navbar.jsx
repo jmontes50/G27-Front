@@ -48,8 +48,24 @@ const Navbar = () => {
           leaveFrom='max-h-screen opacity-100'
           leaveTo='max-h-0 opacity-0'
         >
-          <div>
-            Mobile
+          <div className='flex flex-col gap-2 py-4 border-t border-gray-200'>
+            <Link
+              to="/"
+              className='flex items-center text-sm text-gray-600'
+            >
+              Home
+            </Link>
+            <Link
+              to="/products"
+              className='flex items-center text-sm text-gray-600'
+            >
+              Productos
+            </Link>
+            <Link 
+              to="#"
+              className='px-3 py-1 text-sm text-white bg-black rounded w-min'>
+                Login
+              </Link>
           </div>
         </Transition>
       </div>
