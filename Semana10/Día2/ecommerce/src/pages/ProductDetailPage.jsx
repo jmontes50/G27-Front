@@ -58,13 +58,14 @@ const ProductDetailPage = () => {
           </div>
           <p className="mb-5">{descripcion}</p>
 
-          <div className="flex">
+          <div className="flex gap-4">
             <ProductQuantity
               quantity={quantity}
               incrementQty={incrementQty}
               decrementQty={decrementQty}
             />
-            <button className="btn btn-black">Agregar a carrito</button>
+
+            <button className="w-full btn btn-black">Agregar a carrito</button>
           </div>
         </div>
       </div>
