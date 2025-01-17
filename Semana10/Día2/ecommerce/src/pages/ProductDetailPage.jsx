@@ -1,6 +1,7 @@
 import { useParams } from "react-router-dom";
 import useGetAxios from "../hooks/useGetAxios";
 import Loading from "../components/ui/Loading";
+import Stars from "../components/ui/Stars";
 
 const ProductDetailPage = () => {
   
@@ -25,6 +26,7 @@ const ProductDetailPage = () => {
         </div>
         <div className="mt-2">
           <h2 className="mb-5 text-3xl font-semibold">{nombre}</h2>
+          <Stars rating={estrellas} />
           <div className="mb-5 text-xl">
             <span className="me-2">S/ {precio_oferta.toFixed(2)}</span>
             <span className="line-through text-slate-600">S/ {precio.toFixed(2)}</span>
