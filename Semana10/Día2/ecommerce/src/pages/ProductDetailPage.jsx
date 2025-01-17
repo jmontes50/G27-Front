@@ -17,13 +17,6 @@ const ProductDetailPage = () => {
     return <Loading />;
   }
 
-  const incrementQty = () => setQuantity(quantity + 1);
-  const decrementQty = () => {
-    if (quantity > 1) {
-      setQuantity(quantity - 1);
-    }
-  };
-
   //no puedo desestructurar el id porque ya declaramos id más arriba
   const {
     nombre,
@@ -35,6 +28,18 @@ const ProductDetailPage = () => {
     estrellas,
     detalles,
   } = data;
+
+  const incrementQty = () => {
+    if (quantity < cantidad) {
+      setQuantity(quantity + 1);
+    }
+  };
+  
+  const decrementQty = () => {
+    if (quantity > 1) {
+      setQuantity(quantity - 1);
+    }
+  };
 
   return (
     <div className="px-4 py-10 mx-auto lg:px-8 xl:max-w-7xl">
