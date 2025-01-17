@@ -3,6 +3,10 @@ import { Link } from "react-router-dom";
 import { Transition } from "@headlessui/react";
 
 const Navbar = () => {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const handleIsOpen = () => setIsOpen(!isOpen);
+
   return (
     <nav className='text-black bg-white'>
       {/* container */}
@@ -29,11 +33,25 @@ const Navbar = () => {
           </div>
           {/* botón responsive */}
           <div className='lg:hidden'>
-            <button className='btn btn-black'>
+            <button className='btn btn-black' onClick={handleIsOpen}>
               <i className="fa-solid fa-bars"></i>
             </button>
           </div>
         </div>
+        {/* Mobile */}
+        <Transition
+          show={isOpen}
+          enter="transition-all duration-300 ease-in-out"
+          enterFrom='max-h-0 opacity-0'
+          enterTo='max-h-screen opacity-100'
+          leave="transition-all duration-300 ease-in-out"
+          leaveFrom='max-h-screen opacity-100'
+          leaveTo='max-h-0 opacity-0'
+        >
+          <div>
+            Mobile
+          </div>
+        </Transition>
       </div>
     </nav>
   )
