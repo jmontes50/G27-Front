@@ -9,13 +9,13 @@ const ProductDetailPage = () => {
   const URL = `https://json-server-vercel-git-main-osmar-montesinos-projects.vercel.app/products/${id}`;
   const { data, loading, error } = useGetAxios(URL);
 
+  if (loading) {
+    return <Loading />
+  }
   //no puedo desestructurar el id porque ya declaramos id más arriba
   const { nombre, descripcion, precio, precio_oferta, imagen, cantidad, estrellas, detalles } = data;
 
   console.log(data)
-  if (loading) {
-    return <Loading />
-  }
 
   return (
     <div className="px-4 py-10 mx-auto lg:px-8 xl:max-w-7xl">
