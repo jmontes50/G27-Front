@@ -1,4 +1,5 @@
-import { useState } from "react";
+import { useState, useContext } from "react";
+import { CartContext } from "../context/CartContext";
 import { useParams } from "react-router-dom";
 import useGetAxios from "../hooks/useGetAxios";
 import Loading from "../components/ui/Loading";
@@ -9,6 +10,8 @@ const ProductDetailPage = () => {
   const [quantity, setQuantity] = useState(1);
 
   const { id } = useParams();
+
+  const { cart, addProductToCart } = useContext(CartContext);
 
   const URL = `https://json-server-vercel-git-main-osmar-montesinos-projects.vercel.app/products/${id}`;
   const { data, loading, error } = useGetAxios(URL);
@@ -34,11 +37,20 @@ const ProductDetailPage = () => {
       setQuantity(quantity + 1);
     }
   };
-  
+
   const decrementQty = () => {
     if (quantity > 1) {
       setQuantity(quantity - 1);
     }
+  };
+
+  const handleAddProductToCart = () => {
+    const newProduct = {
+      name: nombre,
+      price: precio_oferta,
+      quantity,
+    };
+    addProductToCart(newProduct);
   };
 
   return (
@@ -65,7 +77,12 @@ const ProductDetailPage = () => {
               decrementQty={decrementQty}
             />
 
-            <button className="w-full btn btn-black">Agregar a carrito</button>
+            <button
+              className="w-full btn btn-black"
+              onClick={handleAddProductToCart}
+            >
+              Agregar a carrito
+            </button>
           </div>
         </div>
       </div>
