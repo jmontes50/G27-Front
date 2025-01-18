@@ -46,6 +46,7 @@ const ProductDetailPage = () => {
 
   const handleAddProductToCart = () => {
     const newProduct = {
+      id: id,
       name: nombre,
       price: precio_oferta,
       quantity,
