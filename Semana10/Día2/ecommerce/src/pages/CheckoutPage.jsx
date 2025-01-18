@@ -30,7 +30,34 @@ const CheckoutPage = () => {
             </TabPanels>
           </TabGroup>
         </div>
-        <div className="col-span-1">Resumen</div>
+        <div className="col-span-1 border-2">
+          <div className="flex justify-between p-6 font-bold border-b-2">
+            <span>Subtotal</span>
+            <span>S/ 200.00</span>
+          </div>
+          <div className="p-6 border-b-2">
+            <span className="text-xs">Código de descuento</span>
+            <div className="flex mb-2">
+              <input type="text" placeholder="Ingrese el código" className="p-4 border-2 border-black outline-none rounded-s-xl" />
+              <button className="px-8 py-4 text-white bg-black rounded-e-xl">
+                Aplicar
+              </button>
+            </div>
+            <div className="flex justify-between text-sm">
+              <span>Costo del delivery</span>
+              <span>S/ 5.00</span>
+            </div>
+          </div>
+          <div className="flex justify-between p-6 font-bold">
+            <span>Total</span>
+            <span>S/ 205.00</span>
+          </div>
+          <div className="px-6 mb-6">
+            <button className="w-full p-4 text-white bg-black rounded-xl">
+              Realizar Checkout
+            </button>
+          </div>
+        </div>
       </div>
     </div>
   );
