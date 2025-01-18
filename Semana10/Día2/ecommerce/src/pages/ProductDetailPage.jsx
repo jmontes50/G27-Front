@@ -5,6 +5,7 @@ import useGetAxios from "../hooks/useGetAxios";
 import Loading from "../components/ui/Loading";
 import Stars from "../components/ui/Stars";
 import ProductQuantity from "../components/Product/ProductQuantity";
+import { toast } from "react-toastify";
 
 const ProductDetailPage = () => {
   const [quantity, setQuantity] = useState(1);
@@ -52,6 +53,7 @@ const ProductDetailPage = () => {
       quantity,
     };
     addProductToCart(newProduct);
+    toast.success(`${nombre} agregado al carrito`);
   };
 
   return (

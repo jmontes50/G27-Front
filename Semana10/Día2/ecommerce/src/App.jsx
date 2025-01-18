@@ -1,5 +1,6 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { CartContextProvider } from "./context/CartContext";
+import { ToastContainer } from "react-toastify";
 import Navbar from "./components/ui/Navbar";
 import HomePage from "./pages/HomePage";
 import ProductsPage from "./pages/ProductsPage";
@@ -15,6 +16,7 @@ const App = () => {
           <Route path="/products" element={<ProductsPage />} />
           <Route path="/product/:id" element={<ProductDetailPage />} />
         </Routes>
+        <ToastContainer />
       </CartContextProvider>
     </BrowserRouter>
   )
