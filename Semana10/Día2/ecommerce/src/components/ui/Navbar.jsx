@@ -28,13 +28,13 @@ const Navbar = () => {
           </ul>
 
           <div className="items-center justify-end hidden gap-4 lg:flex">
-            <div className="relative">
+            <Link to="/checkout" className="relative">
               <span className="absolute flex items-center justify-center w-6 h-6 font-semibold bg-red-500 rounded-full -top-2 -right-2">
                 {totalCart}
               </span>
 
               <i className="fa-solid fa-cart-shopping fa-2x"></i>
-            </div>
+            </Link>
             <Link to="#" className="btn btn-black">
               Login
             </Link>
@@ -66,7 +66,7 @@ const Navbar = () => {
             >
               Productos
             </Link>
-            <Link to="#" className="flex items-center text-sm text-gray-600">
+            <Link to="/checkout" className="flex items-center text-sm text-gray-600">
               Carrito
               <span className="flex items-center justify-center w-6 h-6 font-semibold bg-red-500 rounded-full ms-1">
                 {totalCart}

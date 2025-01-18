@@ -1,6 +1,13 @@
+import { useContext } from "react";
 import { Tab, TabGroup, TabList, TabPanel, TabPanels } from "@headlessui/react";
+import { CartContext } from "../context/CartContext";
+
 
 const CheckoutPage = () => {
+
+  const { cart } = useContext(CartContext);
+  console.log(cart)
+
   return (
     <div className="px-4 py-10 mx-auto lg:px-8 xl:max-w-7xl">
       <h1 className="mb-5 text-3xl text-center">Checkout</h1>
