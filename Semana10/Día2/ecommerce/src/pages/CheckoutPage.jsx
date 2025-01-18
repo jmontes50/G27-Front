@@ -24,7 +24,7 @@ const CheckoutPage = () => {
             </TabList>
             <TabPanels>
               <TabPanel>
-                <TableCart />
+                <TableCart cart={cart}/>
               </TabPanel>
               <TabPanel>CONTENIDO ENVIO</TabPanel>
             </TabPanels>
