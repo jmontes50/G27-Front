@@ -1,7 +1,7 @@
 import { useContext } from "react";
 import { Tab, TabGroup, TabList, TabPanel, TabPanels } from "@headlessui/react";
 import { CartContext } from "../context/CartContext";
-
+import TableCart from "../components/Checkout/TableCart";
 
 const CheckoutPage = () => {
 
@@ -23,7 +23,9 @@ const CheckoutPage = () => {
               </Tab>
             </TabList>
             <TabPanels>
-              <TabPanel>CONTENIDO CHECKOUT</TabPanel>
+              <TabPanel>
+                <TableCart />
+              </TabPanel>
               <TabPanel>CONTENIDO ENVIO</TabPanel>
             </TabPanels>
           </TabGroup>
