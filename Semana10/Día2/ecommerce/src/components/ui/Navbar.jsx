@@ -1,9 +1,12 @@
-import { useState } from "react";
+import { useState, useContext } from "react";
+import { CartContext } from "../../context/CartContext";
 import { Link } from "react-router-dom";
 import { Transition } from "@headlessui/react";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+
+  const { totalCart } = useContext(CartContext);
 
   const handleIsOpen = () => setIsOpen(!isOpen);
 
@@ -27,7 +30,7 @@ const Navbar = () => {
           <div className="items-center justify-end hidden gap-4 lg:flex">
             <div className="relative">
               <span className="absolute flex items-center justify-center w-6 h-6 font-semibold bg-red-500 rounded-full -top-2 -right-2">
-                10
+                {totalCart}
               </span>
 
               <i className="fa-solid fa-cart-shopping fa-2x"></i>
