@@ -66,6 +66,12 @@ const Navbar = () => {
             >
               Productos
             </Link>
+            <Link to="#" className="flex items-center text-sm text-gray-600">
+              Carrito
+              <span className="flex items-center justify-center w-6 h-6 font-semibold bg-red-500 rounded-full ms-1">
+                {totalCart}
+              </span>
+            </Link>
             <Link
               to="#"
               className="px-3 py-1 text-sm text-white bg-black rounded w-min"
