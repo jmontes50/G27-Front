@@ -21,8 +21,11 @@ const CartContextProvider = ({ children }) => {
     }
   }
 
+  //tenemos que indicar como 2do argumento el número 0 para que el acumulador tome ese 0 como valor inicial antes de iterar sobre los items del arreglo
+  const totalCart = cart.reduce((acumulator, prod) => acumulator + prod.quantity, 0)
+
   return (
-    <CartContext.Provider value={{cart, addProductToCart}}>
+    <CartContext.Provider value={{cart, addProductToCart, totalCart}}>
       { children }
     </CartContext.Provider>
   )
