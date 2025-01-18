@@ -8,8 +8,12 @@ const CheckoutPage = () => {
         <div className="col-span-2">
           <TabGroup>
             <TabList>
-              <Tab>Checkout</Tab>
-              <Tab>Datos de envio</Tab>
+              <Tab className="data-[selected]:bg-black data-[selected]:text-white px-4 py-2 rounded-t-lg data-[hover]:bg-slate-500 data-[hover]:text-white">
+                Checkout
+              </Tab>
+              <Tab className="data-[selected]:bg-black data-[selected]:text-white px-4 py-2 rounded-t-lg data-[hover]:bg-slate-500 data-[hover]:text-white">
+                Datos de envio
+              </Tab>
             </TabList>
             <TabPanels>
               <TabPanel>CONTENIDO CHECKOUT</TabPanel>
@@ -17,9 +21,7 @@ const CheckoutPage = () => {
             </TabPanels>
           </TabGroup>
         </div>
-        <div className="col-span-1">
-          Resumen
-        </div>
+        <div className="col-span-1">Resumen</div>
       </div>
     </div>
   );
