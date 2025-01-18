@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState } from "react";
 import { Link } from "react-router-dom";
 import { Transition } from "@headlessui/react";
 
@@ -8,16 +8,14 @@ const Navbar = () => {
   const handleIsOpen = () => setIsOpen(!isOpen);
 
   return (
-    <nav className='text-black bg-white'>
+    <nav className="text-black bg-white">
       {/* container */}
-      <div className='px-4 mx-auto lg:px-8 xl:max-w-7xl'>
-        <div className='flex justify-between py-4'>
+      <div className="px-4 mx-auto lg:px-8 xl:max-w-7xl">
+        <div className="flex justify-between py-4">
           {/* logo */}
-          <div className='flex items-center'>
-            Logo
-          </div>
+          <div className="flex items-center">Logo</div>
           {/* links */}
-          <ul className='items-center justify-center hidden gap-10 lg:flex'>
+          <ul className="items-center justify-center hidden gap-10 lg:flex">
             <li>
               <Link to="/">Home</Link>
             </li>
@@ -26,14 +24,21 @@ const Navbar = () => {
             </li>
           </ul>
 
-          <div className='items-center justify-end hidden gap-4 lg:flex'>
-            <Link to="#" className='btn btn-black'>
+          <div className="items-center justify-end hidden gap-4 lg:flex">
+            <div className="relative">
+              <span className="absolute flex items-center justify-center w-6 h-6 font-semibold bg-red-500 rounded-full -top-2 -right-2">
+                10
+              </span>
+
+              <i className="fa-solid fa-cart-shopping fa-2x"></i>
+            </div>
+            <Link to="#" className="btn btn-black">
               Login
             </Link>
           </div>
           {/* botón responsive */}
-          <div className='lg:hidden'>
-            <button className='btn btn-black' onClick={handleIsOpen}>
+          <div className="lg:hidden">
+            <button className="btn btn-black" onClick={handleIsOpen}>
               <i className="fa-solid fa-bars"></i>
             </button>
           </div>
@@ -42,35 +47,33 @@ const Navbar = () => {
         <Transition
           show={isOpen}
           enter="transition-all duration-300 ease-in-out"
-          enterFrom='max-h-0 opacity-0'
-          enterTo='max-h-screen opacity-100'
+          enterFrom="max-h-0 opacity-0"
+          enterTo="max-h-screen opacity-100"
           leave="transition-all duration-300 ease-in-out"
-          leaveFrom='max-h-screen opacity-100'
-          leaveTo='max-h-0 opacity-0'
+          leaveFrom="max-h-screen opacity-100"
+          leaveTo="max-h-0 opacity-0"
         >
-          <div className='flex flex-col gap-2 py-4 border-t border-gray-200'>
-            <Link
-              to="/"
-              className='flex items-center text-sm text-gray-600'
-            >
+          <div className="flex flex-col gap-2 py-4 border-t border-gray-200">
+            <Link to="/" className="flex items-center text-sm text-gray-600">
               Home
             </Link>
             <Link
               to="/products"
-              className='flex items-center text-sm text-gray-600'
+              className="flex items-center text-sm text-gray-600"
             >
               Productos
             </Link>
-            <Link 
+            <Link
               to="#"
-              className='px-3 py-1 text-sm text-white bg-black rounded w-min'>
-                Login
-              </Link>
+              className="px-3 py-1 text-sm text-white bg-black rounded w-min"
+            >
+              Login
+            </Link>
           </div>
         </Transition>
       </div>
     </nav>
-  )
-}
+  );
+};
 
-export default Navbar
+export default Navbar;
