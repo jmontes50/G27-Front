@@ -7,6 +7,7 @@ import HomePage from "./pages/HomePage";
 import ProductsPage from "./pages/ProductsPage";
 import ProductDetailPage from "./pages/ProductDetailPage";
 import CheckoutPage from "./pages/CheckoutPage";
+import RegisterPage from "./pages/RegisterPage";
 
 const App = () => {
   return (
@@ -19,6 +20,7 @@ const App = () => {
             <Route path="/products" element={<ProductsPage />} />
             <Route path="/product/:id" element={<ProductDetailPage />} />
             <Route path="checkout" element={<CheckoutPage />} />
+            <Route path="/register" element={<RegisterPage />} />
           </Routes>
           <ToastContainer />
         </CartContextProvider>
