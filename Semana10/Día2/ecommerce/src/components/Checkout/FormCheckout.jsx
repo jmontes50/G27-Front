@@ -14,6 +14,9 @@ const FormCheckout = () => {
           <label htmlFor="telephone">Número telefónico:</label>
           <input type="text" className="form-input" id="telephone" />
         </div>
+        <button className="btn btn-black" type="submit">
+          Validar Datos
+        </button>
       </div>
     </form>
   );
