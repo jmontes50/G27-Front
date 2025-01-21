@@ -58,8 +58,18 @@ const FormCheckout = () => {
             type="text"
             className="form-input"
             id="telephone"
-            {...register("telephone")}
+            {...register("telephone", {
+              pattern: {
+                value: /^9[0-9]+$/i,
+                message: "Debe ser un número telefónico",
+              },
+            })}
           />
+           {errors.telephone && (
+            <span className="text-sm text-red-700">
+              {errors.telephone.message}
+            </span>
+          )}
         </div>
         <button className="btn btn-black" type="submit">
           Validar Datos
