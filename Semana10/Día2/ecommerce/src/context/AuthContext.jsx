@@ -11,6 +11,11 @@ const AuthContextProvider = ({ children }) => {
     console.log({ data, error });
   }
 
+  const signInWithEmailAndPassword = async (email, password) => {
+    const { data, error } = await supabase.auth.signInWithPassword({ email, password })
+    console.log({ data, error })
+  }
+
   useEffect(() => {
     //escuchar algún cambio en la sesión del usuario
     const { data : { suscription }} = supabase.auth.onAuthStateChange((event, session) => {
@@ -18,7 +23,7 @@ const AuthContextProvider = ({ children }) => {
     })
   }, [])
 
-  return <AuthContext.Provider value={{ user, registerUser }}>
+  return <AuthContext.Provider value={{ user, registerUser, signInWithEmailAndPassword }}>
     {children}
   </AuthContext.Provider>
 }
