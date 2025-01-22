@@ -28,6 +28,7 @@ const AuthContextProvider = ({ children }) => {
       setUser(session);
     })
 
+    //lo que coloquemos en el return de un useEffect se ejecuta al destruirse el componente, ej, que se oculte, que se cambie de ruta que se cierre la pestaña
     return () => {
       subscription.unsubscribe();
     }
