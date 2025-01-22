@@ -1,6 +1,8 @@
 import { useContext } from "react";
 import { AuthContext } from "../context/AuthContext";
 import { useForm } from "react-hook-form";
+import { toast } from "react-toastify";
+import { useNavigate } from "react-router-dom";
 
 const RegisterPage = () => {
   const {
@@ -11,11 +13,21 @@ const RegisterPage = () => {
 
   const { registerUser } = useContext(AuthContext);
 
-  console.log(registerUser);
+  const navigate = useNavigate();
 
-  const registerNewUser = (data) => {
-    console.log(data);
-    registerUser(data.email, data.password)
+  const registerNewUser = async (data) => {
+    try {
+      const result = await registerUser(data.email, data.password);
+      console.log(result);
+      toast.success(`${result.user.email} registrado!, se envio un correo de activación`, {
+        onClose: () => {
+          // console.log("Al cerrar!!");
+          navigate('/login');
+        },
+      });
+    } catch (error) {
+      toast.error("Ocurrio un error al registrarse");
+    }
   };
 
   return (
