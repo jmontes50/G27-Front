@@ -8,17 +8,34 @@ const AuthContextProvider = ({ children }) => {
 
   const registerUser = async (email, password) => {
     const { data, error } = await supabase.auth.signUp({ email, password })
-    console.log({ data, error });
+    // console.log({ data, error });
+    if(data) {
+      return data; //resolve
+    } else {
+      console.log(error)
+      throw error; //reject
+    }
   }
 
   const signInWithEmailAndPassword = async (email, password) => {
     const { data, error } = await supabase.auth.signInWithPassword({ email, password })
-    console.log({ data, error });
+    // console.log({ data, error });
+    if(data) {
+      return data; //resolve
+    } else {
+      console.log(error)
+      throw error; //reject
+    }
   }
 
   const closeSession = async () => {
     const { error } = await supabase.auth.signOut();
-    console.log(error);
+    // console.log(error);
+    if(error){
+      throw error; //reject
+    }else{
+      return "Cierre de sesión exitoso"
+    }
   }
 
   useEffect(() => {
