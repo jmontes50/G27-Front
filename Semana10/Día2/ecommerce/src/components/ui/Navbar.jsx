@@ -35,9 +35,15 @@ const Navbar = () => {
 
               <i className="fa-solid fa-cart-shopping fa-2x"></i>
             </Link>
-            <Link to="#" className="btn btn-black">
+            <Link to="/login" className="btn btn-black">
               Login
             </Link>
+            <Link to="/register" className="btn btn-black">
+              Registrate
+            </Link>
+            <button className="btn btn-black">
+              Cerrar sesión
+            </button>
           </div>
           {/* botón responsive */}
           <div className="lg:hidden">
@@ -73,11 +79,22 @@ const Navbar = () => {
               </span>
             </Link>
             <Link
-              to="#"
+              to="/login"
               className="px-3 py-1 text-sm text-white bg-black rounded w-min"
             >
               Login
             </Link>
+            <Link
+              to="/register"
+              className="px-3 py-1 text-sm text-white bg-black rounded w-min"
+            >
+              Registrate
+            </Link>
+            <button
+              className="px-3 py-1 text-sm text-white bg-black rounded w-min"
+            >
+              Cerrar sesión
+            </button>
           </div>
         </Transition>
       </div>
