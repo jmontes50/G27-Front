@@ -8,9 +8,14 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   const { totalCart } = useContext(CartContext);
-  const { user } = useContext(AuthContext);
+  const { user, closeSession } = useContext(AuthContext);
+  console.log( user )
 
   const handleIsOpen = () => setIsOpen(!isOpen);
+
+  const handleCloseSession = async() => {
+    await closeSession();
+  }
 
   return (
     <nav className="text-black bg-white">
@@ -39,7 +44,7 @@ const Navbar = () => {
             </Link>
             {/* si user no es null, estamos logueados , mostramos el botón de cerrar sesión, pero si no mostrarmos los botones de login y registro*/}
             {user ? (
-              <button className="btn btn-black">Cerrar sesión</button>
+              <button className="btn btn-black" onClick={handleCloseSession} >Cerrar sesión</button>
             ) : (
               <>
                 <Link to="/login" className="btn btn-black">
@@ -88,7 +93,7 @@ const Navbar = () => {
               </span>
             </Link>
             {user ? (
-              <button className="px-3 py-1 text-sm text-white bg-black rounded w-min">
+              <button className="px-3 py-1 text-sm text-white bg-black rounded w-min" onClick={handleCloseSession}>
                 Cerrar sesión
               </button>
             ) : (

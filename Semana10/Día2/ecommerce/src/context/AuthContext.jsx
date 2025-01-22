@@ -16,6 +16,11 @@ const AuthContextProvider = ({ children }) => {
     console.log({ data, error });
   }
 
+  const closeSession = async () => {
+    const { error } = await supabase.auth.signOut();
+    console.log(error);
+  }
+
   useEffect(() => {
     //escuchar algún cambio en la sesión del usuario
     const { data : { suscription }} = supabase.auth.onAuthStateChange((event, session) => {
@@ -24,7 +29,7 @@ const AuthContextProvider = ({ children }) => {
     })
   }, [])
 
-  return <AuthContext.Provider value={{ user, registerUser, signInWithEmailAndPassword }}>
+  return <AuthContext.Provider value={{ user, registerUser, signInWithEmailAndPassword, closeSession }}>
     {children}
   </AuthContext.Provider>
 }
