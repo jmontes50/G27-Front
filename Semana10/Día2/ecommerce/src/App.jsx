@@ -8,6 +8,7 @@ import ProductsPage from "./pages/ProductsPage";
 import ProductDetailPage from "./pages/ProductDetailPage";
 import CheckoutPage from "./pages/CheckoutPage";
 import RegisterPage from "./pages/RegisterPage";
+import LoginPage from "./pages/LoginPage"
 
 const App = () => {
   return (
@@ -21,6 +22,7 @@ const App = () => {
             <Route path="/product/:id" element={<ProductDetailPage />} />
             <Route path="checkout" element={<CheckoutPage />} />
             <Route path="/register" element={<RegisterPage />} />
+            <Route path="/login" element={<LoginPage />} />
           </Routes>
           <ToastContainer />
         </CartContextProvider>

@@ -43,7 +43,7 @@ const LoginPage = () => {
           />
         </div>
         <button className="btn btn-black" type="submit">
-          Registrar Usuario
+          Acceder
         </button>
       </form>
     </div>
