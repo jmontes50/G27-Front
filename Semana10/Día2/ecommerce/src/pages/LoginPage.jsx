@@ -9,11 +9,11 @@ const LoginPage = () => {
     formState: { errors },
   } = useForm();
 
-  const { registerUser } = useContext(AuthContext);
+  const { signInWithEmailAndPassword } = useContext(AuthContext);
 
   const handleLogin = (data) => {
-    console.log(data);
-    // registerUser(data.email, data.password)
+    // console.log(data);
+    signInWithEmailAndPassword(data.email, data.password)
   };
 
   return (

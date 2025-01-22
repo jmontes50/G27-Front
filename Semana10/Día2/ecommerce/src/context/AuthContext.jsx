@@ -13,7 +13,7 @@ const AuthContextProvider = ({ children }) => {
 
   const signInWithEmailAndPassword = async (email, password) => {
     const { data, error } = await supabase.auth.signInWithPassword({ email, password })
-    console.log({ data, error })
+    console.log({ data, error });
   }
 
   useEffect(() => {
