@@ -1,4 +1,5 @@
 import { useState, useContext } from "react";
+import { AuthContext } from "../../context/AuthContext";
 import { CartContext } from "../../context/CartContext";
 import { Link } from "react-router-dom";
 import { Transition } from "@headlessui/react";
@@ -7,6 +8,7 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   const { totalCart } = useContext(CartContext);
+  const { user } = useContext(AuthContext);
 
   const handleIsOpen = () => setIsOpen(!isOpen);
 
@@ -35,15 +37,19 @@ const Navbar = () => {
 
               <i className="fa-solid fa-cart-shopping fa-2x"></i>
             </Link>
-            <Link to="/login" className="btn btn-black">
-              Login
-            </Link>
-            <Link to="/register" className="btn btn-black">
-              Registrate
-            </Link>
-            <button className="btn btn-black">
-              Cerrar sesión
-            </button>
+            {/* si user no es null, estamos logueados , mostramos el botón de cerrar sesión, pero si no mostrarmos los botones de login y registro*/}
+            {user ? (
+              <button className="btn btn-black">Cerrar sesión</button>
+            ) : (
+              <>
+                <Link to="/login" className="btn btn-black">
+                  Login
+                </Link>
+                <Link to="/register" className="btn btn-black">
+                  Registrate
+                </Link>
+              </>
+            )}
           </div>
           {/* botón responsive */}
           <div className="lg:hidden">
@@ -72,29 +78,35 @@ const Navbar = () => {
             >
               Productos
             </Link>
-            <Link to="/checkout" className="flex items-center text-sm text-gray-600">
+            <Link
+              to="/checkout"
+              className="flex items-center text-sm text-gray-600"
+            >
               Carrito
               <span className="flex items-center justify-center w-6 h-6 font-semibold bg-red-500 rounded-full ms-1">
                 {totalCart}
               </span>
             </Link>
-            <Link
-              to="/login"
-              className="px-3 py-1 text-sm text-white bg-black rounded w-min"
-            >
-              Login
-            </Link>
-            <Link
-              to="/register"
-              className="px-3 py-1 text-sm text-white bg-black rounded w-min"
-            >
-              Registrate
-            </Link>
-            <button
-              className="px-3 py-1 text-sm text-white bg-black rounded w-min"
-            >
-              Cerrar sesión
-            </button>
+            {user ? (
+              <button className="px-3 py-1 text-sm text-white bg-black rounded w-min">
+                Cerrar sesión
+              </button>
+            ) : (
+              <>
+                <Link
+                  to="/login"
+                  className="px-3 py-1 text-sm text-white bg-black rounded w-min"
+                >
+                  Login
+                </Link>
+                <Link
+                  to="/register"
+                  className="px-3 py-1 text-sm text-white bg-black rounded w-min"
+                >
+                  Registrate
+                </Link>
+              </>
+            )}
           </div>
         </Transition>
       </div>
