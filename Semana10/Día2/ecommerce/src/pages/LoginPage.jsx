@@ -2,7 +2,7 @@ import { useContext } from "react";
 import { AuthContext } from "../context/AuthContext";
 import { useForm } from "react-hook-form";
 
-const RegisterPage = () => {
+const LoginPage = () => {
   const {
     register,
     handleSubmit,
@@ -11,17 +11,15 @@ const RegisterPage = () => {
 
   const { registerUser } = useContext(AuthContext);
 
-  console.log(registerUser);
-
   const registerNewUser = (data) => {
     console.log(data);
-    registerUser(data.email, data.password)
+    // registerUser(data.email, data.password)
   };
 
   return (
     <div className="flex items-center justify-center w-full h-screen">
       <form onSubmit={handleSubmit(registerNewUser)} className="w-96">
-        <h1 className="mb-4 text-2xl font-semibold">Registrese</h1>
+        <h1 className="mb-4 text-2xl font-semibold">Ingrese</h1>
         <div className="flex flex-col mb-3">
           <label className="text-sm" htmlFor="email">
             Correo:
@@ -52,4 +50,4 @@ const RegisterPage = () => {
   );
 };
 
-export default RegisterPage;
+export default LoginPage;

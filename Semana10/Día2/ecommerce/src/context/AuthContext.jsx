@@ -11,6 +11,13 @@ const AuthContextProvider = ({ children }) => {
     console.log({ data, error });
   }
 
+  useEffect(() => {
+    //escuchar algún cambio en la sesión del usuario
+    const { data : { suscription }} = supabase.auth.onAuthStateChange((event, session) => {
+      console.log("onAuthStateChange", { event, session });
+    })
+  }, [])
+
   return <AuthContext.Provider value={{ user, registerUser }}>
     {children}
   </AuthContext.Provider>
