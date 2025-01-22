@@ -18,7 +18,8 @@ const AuthContextProvider = ({ children }) => {
 
   const signInWithEmailAndPassword = async (email, password) => {
     const { data, error } = await supabase.auth.signInWithPassword({ email, password })
-    if(data) {
+    console.log({ data, error });
+    if(data.user) {
       return data; //resolve
     } else {
       console.log(error)

@@ -1,6 +1,8 @@
 import { useContext } from "react";
 import { AuthContext } from "../context/AuthContext";
 import { useForm } from "react-hook-form";
+import { useNavigate } from "react-router-dom";
+import { toast } from "react-toastify";
 
 const LoginPage = () => {
   const {
@@ -11,9 +13,22 @@ const LoginPage = () => {
 
   const { signInWithEmailAndPassword } = useContext(AuthContext);
 
-  const handleLogin = (data) => {
-    // console.log(data);
-    signInWithEmailAndPassword(data.email, data.password)
+  const navigate = useNavigate();
+
+  const handleLogin = async (data) => {
+    try {
+      const result = await signInWithEmailAndPassword(data.email, data.password)
+      toast.success(`${result.user.email} Ingreso exitosamente!`, {
+        onClose: () => {
+          navigate('/products')
+        }
+      })
+    } catch (error) {
+      console.log(error);
+      toast.error(`Sucedio un error: ${error.message}, pruebe nuevamente!`)
+    }
+
+    
   };
 
   return (
