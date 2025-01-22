@@ -11,14 +11,14 @@ const LoginPage = () => {
 
   const { registerUser } = useContext(AuthContext);
 
-  const registerNewUser = (data) => {
+  const handleLogin = (data) => {
     console.log(data);
     // registerUser(data.email, data.password)
   };
 
   return (
     <div className="flex items-center justify-center w-full h-screen">
-      <form onSubmit={handleSubmit(registerNewUser)} className="w-96">
+      <form onSubmit={handleSubmit(handleLogin)} className="w-96">
         <h1 className="mb-4 text-2xl font-semibold">Ingrese</h1>
         <div className="flex flex-col mb-3">
           <label className="text-sm" htmlFor="email">
