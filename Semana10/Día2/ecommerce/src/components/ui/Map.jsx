@@ -3,15 +3,28 @@ import { MapContainer, Marker, TileLayer, Popup, useMap, useMapEvents } from "re
 
 const Map = () => {
   const [coordsCenter, setCoordsCenter] = useState([-12.0678297, -77.0369672]);
+  const [positionMarker, setPositionMarker] = useState(null)
 
   const ActionsMap = () => {
+
+    useMapEvents({
+      click: (event) => {
+        console.log(event.latlng);
+        const { lat, lng } = event.latlng;
+        // console.log(lat, lng)
+        setCoordsCenter([lat, lng]);
+        setPositionMarker([lat, lng]);
+      }
+    })
 
     if(coordsCenter){
       const map = useMap();
       map.flyTo(coordsCenter);
     }
 
-    return <></>
+    return <>
+      {positionMarker ? <Marker position={positionMarker} /> : null}
+    </>
   }
 
   useEffect(() => {
@@ -34,11 +47,11 @@ const Map = () => {
         />
           <ActionsMap />
         {/* marcador estatico */}
-        <Marker position={coordsCenter}>
+        {/* <Marker position={coordsCenter}>
           <Popup>
             A pretty CSS3 popup. <br /> Easily customizable.
           </Popup>
-        </Marker>
+        </Marker> */}
       </MapContainer>
     </div>
   );

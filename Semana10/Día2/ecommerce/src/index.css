@@ -17,5 +17,5 @@
 /* leaflet trae su propio contenedor hay que indicarle que ocupe todo el ancho y alto posible */
 .leaflet-container {
     height:100%;
-    width:100;
+    width:100%;
 }
