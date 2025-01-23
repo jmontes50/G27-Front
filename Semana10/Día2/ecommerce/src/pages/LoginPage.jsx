@@ -27,8 +27,6 @@ const LoginPage = () => {
       console.log(error);
       toast.error(`Sucedio un error: ${error.message}, pruebe nuevamente!`)
     }
-
-    
   };
 
   return (
