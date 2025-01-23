@@ -24,9 +24,9 @@ const App = () => {
             <Route
               path="/checkout"
               element={
-                <ProtectedRoute>
+                
                   <CheckoutPage />
-                </ProtectedRoute>
+                
               }
             />
             <Route path="/register" element={<RegisterPage />} />
