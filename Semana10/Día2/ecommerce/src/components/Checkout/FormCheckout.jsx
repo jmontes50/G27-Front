@@ -1,4 +1,5 @@
 import { useForm } from "react-hook-form";
+import Map from "../ui/Map";
 
 const FormCheckout = () => {
   const {
@@ -71,6 +72,7 @@ const FormCheckout = () => {
             </span>
           )}
         </div>
+        <Map />
         <button className="btn btn-black" type="submit">
           Validar Datos
         </button>
