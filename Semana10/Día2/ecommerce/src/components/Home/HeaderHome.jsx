@@ -2,7 +2,7 @@ const HeaderHome = () => {
   return (
     <div className="relative">
       {/* si queremos tener contenido estáticop (jpg, mp4, etc) en la app lo ideal es ponerlo en public*/}
-      <img src="/public/headerpicture.avif" alt="headerphoto" />
+      <img src="headerpicture.avif" alt="headerphoto" />
       <div className="absolute flex flex-col gap-5 top-24 left-20">
         <span className="text-3xl">
           Classic Exclusive
