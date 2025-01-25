@@ -10,13 +10,17 @@ const counterSlice = createSlice({
     //la idea de cada reducer es que sea una función pura, representa la lógica de c/acción
     increment: (state) => {
       state.value += 1; //state.value = state.value + 1;
+    },
+    setCounter: (state, action) => {
+      console.log("action", action)
+      state.value = action.payload;
     }
   }
 });
 
 //las acciones serán las que serán disparadas por los componentes
-const { increment } = counterSlice.actions;
+const { increment, setCounter } = counterSlice.actions;
 
-export { increment };
+export { increment, setCounter };
 //el .reducer va a ser la referencia para indicar en el store
 export default counterSlice.reducer; 
